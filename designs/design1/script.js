@@ -50,48 +50,54 @@ const propertiesData = [
     baths: "4 Baths",
     sqft: "4,100 Sq. Ft.",
     image: "images/listing-waterfront.jpg"
+  },
+  {
+    title: "Geometric Concrete Residence",
+    desc: "A bold brutalist design celebrating tactile cast-in-place concrete, oversized floor-to-ceiling pivot windows, and uninterrupted panoramic views of the Rocky Mountains.",
+    price: "$1,980,000",
+    location: "Boulder, CO • Alpine Ridge",
+    beds: "4 Beds",
+    baths: "4 Baths",
+    sqft: "3,600 Sq. Ft.",
+    image: "images/partner-brutalist.jpg"
   }
 ];
 
-// Carousel Navigation
+// Carousel Navigation (only active on index.html)
 const prevBtn = document.getElementById('prevSlideBtn');
 const nextBtn = document.getElementById('nextSlideBtn');
 const counterLabel = document.getElementById('carouselCounter');
 const listingsTrack = document.getElementById('listingsTrack');
-const allCards = document.querySelectorAll('.listing-card');
 
-let currentSlideIndex = 1; // Default to listing 2 (02) as highlighted in the mockup
-const totalSlides = allCards.length;
+if (listingsTrack && prevBtn && nextBtn) {
+  const allCards = listingsTrack.querySelectorAll('.listing-card');
+  let currentSlideIndex = 1;
+  const totalSlides = allCards.length;
 
-function updateCarouselView() {
-  allCards.forEach((card, idx) => {
-    // Show 3 cards at a time on desktop
-    if (idx >= currentSlideIndex && idx < currentSlideIndex + 3) {
-      card.style.display = 'block';
-    } else if (currentSlideIndex + 3 > totalSlides && idx < (currentSlideIndex + 3) % totalSlides) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
+  function updateCarouselView() {
+    allCards.forEach((card, idx) => {
+      if (idx >= currentSlideIndex && idx < currentSlideIndex + 3) {
+        card.style.display = 'block';
+      } else if (currentSlideIndex + 3 > totalSlides && idx < (currentSlideIndex + 3) % totalSlides) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    const formattedNum = String(currentSlideIndex + 1).padStart(2, '0');
+    if (counterLabel) {
+      counterLabel.textContent = `(${formattedNum}) Featured Listings`;
     }
-  });
-
-  const formattedNum = String(currentSlideIndex + 1).padStart(2, '0');
-  if (counterLabel) {
-    counterLabel.textContent = `(${formattedNum}) Featured Listings`;
   }
-}
 
-// Initial setup
-updateCarouselView();
+  updateCarouselView();
 
-if (nextBtn) {
   nextBtn.addEventListener('click', () => {
     currentSlideIndex = (currentSlideIndex + 1) % (totalSlides - 2);
     updateCarouselView();
   });
-}
 
-if (prevBtn) {
   prevBtn.addEventListener('click', () => {
     currentSlideIndex = (currentSlideIndex - 1 + (totalSlides - 2)) % (totalSlides - 2);
     updateCarouselView();
@@ -107,24 +113,37 @@ function scrollToFeatured() {
 // Modal Functions
 function openPropertyModal(index) {
   const data = propertiesData[index] || propertiesData[0];
-  document.getElementById('modalTitle').textContent = data.title;
-  document.getElementById('modalDesc').textContent = data.desc;
-  document.getElementById('modalPrice').textContent = data.price;
-  document.getElementById('modalLocation').textContent = data.location;
-  document.getElementById('modalBeds').textContent = data.beds;
-  document.getElementById('modalBaths').textContent = data.baths;
-  document.getElementById('modalSqft').textContent = data.sqft;
-  document.getElementById('modalImg').src = data.image;
+  const t = document.getElementById('modalTitle');
+  const d = document.getElementById('modalDesc');
+  const p = document.getElementById('modalPrice');
+  const l = document.getElementById('modalLocation');
+  const bd = document.getElementById('modalBeds');
+  const ba = document.getElementById('modalBaths');
+  const s = document.getElementById('modalSqft');
+  const im = document.getElementById('modalImg');
+
+  if (t) t.textContent = data.title;
+  if (d) d.textContent = data.desc;
+  if (p) p.textContent = data.price;
+  if (l) l.textContent = data.location;
+  if (bd) bd.textContent = data.beds;
+  if (ba) ba.textContent = data.baths;
+  if (s) s.textContent = data.sqft;
+  if (im) im.src = data.image;
 
   const modal = document.getElementById('propertyModal');
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 }
 
 function closePropertyModal() {
   const modal = document.getElementById('propertyModal');
-  modal.classList.remove('active');
-  document.body.style.overflow = '';
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 }
 
 function closeModalOnBackdrop(event) {
@@ -141,10 +160,16 @@ document.addEventListener('keydown', (e) => {
 // Inline VIP Tour Submission Handler
 function handleTourSubmit(event) {
   event.preventDefault();
-  const name = document.getElementById('tourName').value.trim();
-  const contact = document.getElementById('tourContact').value.trim();
-  const interest = document.getElementById('tourInterest').value.trim();
+  const nameEl = document.getElementById('tourName');
+  const contactEl = document.getElementById('tourContact');
+  const interestEl = document.getElementById('tourInterest');
   const feedback = document.getElementById('formFeedback');
+
+  if (!nameEl || !contactEl || !feedback) return;
+
+  const name = nameEl.value.trim();
+  const contact = contactEl.value.trim();
+  const interest = interestEl ? interestEl.value.trim() : '';
 
   if (!name || !contact) {
     feedback.className = 'form-feedback error';
@@ -157,7 +182,7 @@ function handleTourSubmit(event) {
   feedback.style.display = 'block';
   feedback.textContent = '✓ Private tour requested! Our advisor will contact you within 2 hours.';
 
-  document.getElementById('tourName').value = '';
-  document.getElementById('tourContact').value = '';
-  document.getElementById('tourInterest').value = '';
+  nameEl.value = '';
+  contactEl.value = '';
+  if (interestEl) interestEl.value = '';
 }

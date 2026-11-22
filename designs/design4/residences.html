@@ -252,9 +252,9 @@
   </footer>
 
   <!-- Simple Dossier Modal -->
-  <div class="modal-backdrop-luxury" id="dossierModal" onclick="if(event.target===this) this.classList.remove('active')">
+  <div class="modal-backdrop-luxury" id="dossierModal" onclick="closeDossierBackdrop(event)">
     <div class="modal-luxury-card" style="max-width: 600px;">
-      <button class="modal-close-gold" onclick="document.getElementById('dossierModal').classList.remove('active')">✕</button>
+      <button class="modal-close-gold" onclick="closeDossierModal()">✕</button>
       <div style="padding: 32px;">
         <span style="font-size: 11px; font-weight: 700; color: var(--accent-gold-dark); text-transform: uppercase;" id="dosRera">RERA CERTIFIED</span>
         <h3 style="font-family: var(--font-serif); font-size: 28px; color: var(--bg-emerald); margin: 6px 0;" id="dosTitle">Property</h3>
@@ -263,7 +263,7 @@
         <p style="font-size: 14px; color: var(--text-body); line-height: 1.6; margin-bottom: 24px;">
           Includes clear 30-year legal title search, 100% authentic Vastu Shastra certification, and private showing coordination.
         </p>
-        <button class="btn-primary-gold" style="width: 100%;" onclick="alert('Dossier requested! Our relationship manager will coordinate via WhatsApp.'); document.getElementById('dossierModal').classList.remove('active');">
+        <button class="btn-primary-gold" style="width: 100%;" onclick="alert('Dossier requested! Our relationship manager will coordinate via WhatsApp.'); closeDossierModal();">
           Schedule Private Maybach Showing →
         </button>
       </div>
@@ -290,6 +290,16 @@
       document.getElementById('dosPrice').textContent = price;
       document.getElementById('dosRera').textContent = rera;
       document.getElementById('dossierModal').classList.add('active');
+    }
+
+    function closeDossierModal() {
+      document.getElementById('dossierModal').classList.remove('active');
+    }
+
+    function closeDossierBackdrop(e) {
+      if (e.target.id === 'dossierModal') {
+        closeDossierModal();
+      }
     }
 
     function openChauffeurModal(name) {

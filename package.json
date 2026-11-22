@@ -1,0 +1,17 @@
+{
+  "name": "realestatedesign",
+  "version": "1.0.0",
+  "description": "Client presentation hub with 5 responsive multi-page real estate concepts",
+  "scripts": {
+    "build": "echo 'Static build ready'",
+    "start": "python3 -m http.server 8080"
+  },
+  "keywords": [
+    "real-estate",
+    "mockup",
+    "presentation-hub",
+    "proptech"
+  ],
+  "author": "Nirbhay Sagar",
+  "license": "MIT"
+}
