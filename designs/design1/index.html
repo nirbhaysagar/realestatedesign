@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poperty — Architectural & Luxury Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-wrapper">
+    <div class="hero-container">
+      
+      <!-- Top Navigation -->
+      <header class="site-header">
+        <a href="index.html" class="brand-logo">Poperty</a>
+        <nav class="main-nav">
+          <a href="index.html" style="color: #fff; font-weight: 700;">Home</a>
+          <a href="properties.html">Properties</a>
+          <a href="about.html">About Us</a>
+          <a href="#featured">Featured</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a href="properties.html" class="header-cta-btn">
+          <span>Browse Properties</span>
+          <span class="btn-arrow-circle">↗</span>
+        </a>
+      </header>
+
+      <!-- Hero Typography & Intro -->
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Discover Your Perfect<br>Property In Your City.
+        </h1>
+        <p class="hero-subtitle">
+          Exclusive listings, competitive prices, and expert guidance—all in one place.
+        </p>
+
+        <!-- Interactive Quick Search Bar -->
+        <div class="hero-search-bar">
+          <div class="search-item">
+            <span class="search-label">Location</span>
+            <input type="text" class="search-input-field" placeholder="Miami, Beverly Hills, NYC..." id="searchLoc">
+          </div>
+          <div class="search-divider"></div>
+          <div class="search-item">
+            <span class="search-label">Property Type</span>
+            <select class="search-input-field" style="background: transparent; color: #fff; border: none; cursor: pointer;">
+              <option value="all" style="color: #111;">All Types</option>
+              <option value="villa" style="color: #111;">Luxury Villa</option>
+              <option value="penthouse" style="color: #111;">Skyline Penthouse</option>
+              <option value="commercial" style="color: #111;">Commercial Space</option>
+            </select>
+          </div>
+          <div class="search-divider"></div>
+          <div class="search-item">
+            <span class="search-label">Max Price</span>
+            <input type="text" class="search-input-field" placeholder="Up to $3,000,000">
+          </div>
+          <button class="search-btn" onclick="scrollToFeatured()">
+            <span>Explore</span>
+            <span>→</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== SECTION 2: TRUSTED PARTNER ==================== -->
+  <section class="partner-section" id="about">
+    <div class="container">
+      <h2 class="section-headline">
+        Your Trusted Partner in<br>Real Estate
+      </h2>
+
+      <div class="partner-grid">
+        <!-- Left: Signature Tall Architecture Card -->
+        <div class="partner-left-card">
+          <img src="images/partner-hallway.jpg" alt="Minimalist interior architectural design">
+        </div>
+
+        <!-- Right: 2 Images + About Us Description + Quote -->
+        <div class="partner-right">
+          <div class="partner-images-row">
+            <div class="partner-sub-card">
+              <img src="images/partner-brutalist.jpg" alt="Brutalist modern architecture villa">
+            </div>
+            <div class="partner-sub-card">
+              <img src="images/partner-villa.jpg" alt="Contemporary luxury residence">
+            </div>
+          </div>
+
+          <div class="partner-text-wrapper">
+            <div class="partner-about-label">About Us</div>
+            <div class="partner-body-cols">
+              <p>
+                At Poperty, we believe that finding your dream home should be an exciting and seamless journey. With 10 years of experience, we have helped thousands of buyers, sellers.
+              </p>
+              <p>
+                Whether you're looking for a cozy apartment, a luxury villa, or a prime commercial space, our team is committed to providing expert guidance.
+              </p>
+            </div>
+          </div>
+
+          <div class="partner-highlight-quote">
+            Exclusive listings, competitive prices, and expert guidance—all in one place.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== SECTION 3: EXPLORE OUR BEST LISTINGS ==================== -->
+  <section class="listings-section" id="featured">
+    <div class="container">
+      
+      <!-- Section Header with Counter & Carousel Nav Controls -->
+      <div class="listings-header">
+        <h2 class="section-headline" style="margin-bottom: 0;">
+          Explore Our Best Listings
+        </h2>
+        
+        <div class="listings-meta">
+          <span class="listings-counter" id="carouselCounter">(02) Featured Listings</span>
+          <div class="carousel-nav-controls">
+            <button class="carousel-ctrl-btn" id="prevSlideBtn" aria-label="Previous listing">←</button>
+            <button class="carousel-ctrl-btn" id="nextSlideBtn" aria-label="Next listing">→</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Listings Grid / Carousel Track -->
+      <div class="listings-slider-track" id="listingsTrack">
+        
+        <!-- Listing 1: Commercial Spaces -->
+        <div class="listing-card" onclick="openPropertyModal(0)">
+          <img src="images/listing-commercial.jpg" alt="Commercial Spaces" class="listing-card-bg">
+          <div class="listing-card-gradient"></div>
+          <div class="listing-badges-top">
+            <span class="badge-pill">Commercial</span>
+            <span class="badge-pill">Inquire for Price</span>
+          </div>
+          <div class="listing-card-bottom">
+            <h3 class="listing-title">Commercial Spaces</h3>
+            <p class="listing-desc">Functional, Inspiring Environments For Businesses To Thrive.</p>
+          </div>
+        </div>
+
+        <!-- Listing 2: Modern 3-Bedroom Villa in Downtown (Featured) -->
+        <div class="listing-card" onclick="openPropertyModal(1)">
+          <img src="images/listing-villa.jpg" alt="Modern 3-Bedroom Villa" class="listing-card-bg">
+          <div class="listing-card-gradient"></div>
+          <div class="listing-badges-top">
+            <span class="badge-pill hot">🔥 Hot</span>
+            <span class="badge-pill">Price: $450,000</span>
+            <span class="badge-pill">Place: Miami, FL</span>
+          </div>
+          <div class="listing-card-bottom">
+            <h3 class="listing-title">Modern 3-Bedroom Villa in Downtown</h3>
+            <div class="listing-specs">
+              <span>3 Beds</span>
+              <span>•</span>
+              <span>2 Baths</span>
+              <span>•</span>
+              <span>1,800 Sq. Ft.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3: Interior Architecture -->
+        <div class="listing-card" onclick="openPropertyModal(2)">
+          <img src="images/listing-interior.jpg" alt="Interior Architecture" class="listing-card-bg">
+          <div class="listing-card-gradient"></div>
+          <div class="listing-badges-top">
+            <span class="badge-pill">Exclusive</span>
+            <span class="badge-pill">Price: $890,000</span>
+            <span class="badge-pill">Place: Austin, TX</span>
+          </div>
+          <div class="listing-card-bottom">
+            <h3 class="listing-title">Interior Architecture</h3>
+            <p class="listing-desc">Seamlessly Integrating Form And Function.</p>
+          </div>
+        </div>
+
+        <!-- Listing 4 (Available in slider): Skyline Penthouse -->
+        <div class="listing-card" onclick="openPropertyModal(3)">
+          <img src="images/listing-penthouse.jpg" alt="Skyline Penthouse" class="listing-card-bg">
+          <div class="listing-card-gradient"></div>
+          <div class="listing-badges-top">
+            <span class="badge-pill">New Arrival</span>
+            <span class="badge-pill">Price: $1,450,000</span>
+            <span class="badge-pill">Place: Chicago, IL</span>
+          </div>
+          <div class="listing-card-bottom">
+            <h3 class="listing-title">Skyline Penthouse Loft</h3>
+            <div class="listing-specs">
+              <span>4 Beds</span>
+              <span>•</span>
+              <span>3 Baths</span>
+              <span>•</span>
+              <span>2,650 Sq. Ft.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 5 (Available in slider): Waterfront Sanctuary -->
+        <div class="listing-card" onclick="openPropertyModal(4)">
+          <img src="images/listing-waterfront.jpg" alt="Minimalist Waterfront Sanctuary" class="listing-card-bg">
+          <div class="listing-card-gradient"></div>
+          <div class="listing-badges-top">
+            <span class="badge-pill hot">Rare Asset</span>
+            <span class="badge-pill">Price: $2,750,000</span>
+            <span class="badge-pill">Place: Malibu, CA</span>
+          </div>
+          <div class="listing-card-bottom">
+            <h3 class="listing-title">Minimalist Waterfront Sanctuary</h3>
+            <div class="listing-specs">
+              <span>5 Beds</span>
+              <span>•</span>
+              <span>4 Baths</span>
+              <span>•</span>
+              <span>4,100 Sq. Ft.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== SECTION 4: KEY STATS ==================== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">$1.4B+</div>
+          <div class="stat-label">Total Volume Closed</div>
+          <div class="stat-desc">Representing premier properties worldwide</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">99.2%</div>
+          <div class="stat-label">Client Satisfaction</div>
+          <div class="stat-desc">Based on verified post-purchase audits</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">350+</div>
+          <div class="stat-label">Curated Properties</div>
+          <div class="stat-desc">Vetted architectural marvels and estates</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Years of Mastery</div>
+          <div class="stat-desc">Shaping modern luxury real estate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== SECTION 5: SERVICES & EXPERTISE ==================== -->
+  <section class="experience-section" id="services">
+    <div class="container">
+      <div class="experience-header">
+        <span class="experience-tag">What We Offer</span>
+        <h2 class="section-headline" style="margin-bottom: 16px;">
+          Tailored Real Estate Services For Discerning Clients
+        </h2>
+        <p style="color: var(--text-muted); font-size: 16px;">
+          From private off-market acquisitions to strategic architectural consultation, our team delivers seamless execution.
+        </p>
+      </div>
+
+      <div class="experience-grid">
+        <div class="experience-card">
+          <div class="exp-icon">🏛️</div>
+          <h3 class="exp-title">Private Architectural Brokerage</h3>
+          <p class="exp-text">
+            Direct access to rare, off-market architectural masterpieces not published on public MLS systems.
+          </p>
+        </div>
+        <div class="experience-card">
+          <div class="exp-icon">📐</div>
+          <h3 class="exp-title">Interior & Renovation Advisory</h3>
+          <p class="exp-text">
+            Consultation with leading architects and designers to envision, expand, or repurpose luxury properties.
+          </p>
+        </div>
+        <div class="experience-card">
+          <div class="exp-icon">💎</div>
+          <h3 class="exp-title">VIP Concierge & Relocation</h3>
+          <p class="exp-text">
+            White-glove moving logistics, neighborhood lifestyle briefings, legal advisory, and escrow management.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== SECTION 6: CLIENT TESTIMONIALS ==================== -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <span class="experience-tag">Client Stories</span>
+        <h2 class="section-headline" style="margin-bottom: 8px;">
+          What Our Clients Say
+        </h2>
+        <p style="color: var(--text-muted); font-size: 15px;">
+          Trusted by homeowners, design enthusiasts, and premier institutional investors.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div>
+            <div class="quote-stars">★★★★★</div>
+            <p class="quote-text">
+              "Poperty found us an architectural dream home in Downtown Miami that was never even listed publicly. Their attention to detail and design curation is unmatched."
+            </p>
+          </div>
+          <div class="client-meta">
+            <img src="images/avatar-1.jpg" alt="Elena Rostova" class="client-avatar">
+            <div>
+              <div class="client-name">Elena Rostova</div>
+              <div class="client-role">Architectural Collector, Miami</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="quote-stars">★★★★★</div>
+            <p class="quote-text">
+              "As an investor looking for both aesthetic value and strong appreciation, Poperty gave me data-backed confidence and negotiated an exceptional price."
+            </p>
+          </div>
+          <div class="client-meta">
+            <img src="images/avatar-2.jpg" alt="Marcus Chen" class="client-avatar">
+            <div>
+              <div class="client-name">Marcus Chen</div>
+              <div class="client-role">Commercial Real Estate Investor</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="quote-stars">★★★★★</div>
+            <p class="quote-text">
+              "The process was completely transparent from day one. In less than 20 days, we were moving into a tranquil coastal villa that exceeded every expectation."
+            </p>
+          </div>
+          <div class="client-meta">
+            <img src="images/avatar-3.jpg" alt="Sophia Al-Mansoor" class="client-avatar">
+            <div>
+              <div class="client-name">Sophia Al-Mansoor</div>
+              <div class="client-role">Private Homeowner</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== SECTION 7: PRIVATE TOUR BANNER ==================== -->
+  <section class="tour-banner-section" id="contact">
+    <div class="container">
+      <div class="tour-card">
+        <div>
+          <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.6); font-weight: 700;">VIP Access</span>
+          <h2 class="tour-title">Schedule a Private Showing Today.</h2>
+          <p class="tour-subtitle">
+            Experience our curated properties in person with one of our senior architectural specialists. Discretion and tailored walkthroughs guaranteed.
+          </p>
+        </div>
+
+        <form class="tour-form" id="tourForm" novalidate onsubmit="handleTourSubmit(event)">
+          <div class="form-feedback" id="formFeedback"></div>
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-input" id="tourName" placeholder="e.g. Alexander Vance">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email or Phone</label>
+            <input type="text" class="form-input" id="tourContact" placeholder="alexander@example.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Interested Listing / Area</label>
+            <input type="text" class="form-input" id="tourInterest" placeholder="e.g. Modern Villa in Downtown">
+          </div>
+          <button type="submit" class="form-submit-btn">
+            <span>Book Private Tour</span>
+            <span>↗</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== SECTION 8: FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="#" class="brand-logo" style="color: #111;">Poperty</a>
+          <p class="footer-brand-desc">
+            Defining the pinnacle of modern architectural living. Curated listings, bespoke acquisitions, and unparalleled real estate advisory.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Properties</h4>
+          <ul>
+            <li><a href="properties.html">All Properties</a></li>
+            <li><a href="properties.html">Featured Villas</a></li>
+            <li><a href="properties.html">Commercial Spaces</a></li>
+            <li><a href="properties.html">Skyline Penthouses</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#curators">Our Curators</a></li>
+            <li><a href="index.html#testimonials">Client Stories</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Inquiries</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Licensing</a></li>
+            <li><a href="#">contact@poperty.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Poperty Real Estate Inc. All rights reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter / X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==================== INTERACTIVE PROPERTY MODAL ==================== -->
+  <div class="modal-backdrop" id="propertyModal" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closePropertyModal()">✕</button>
+      <img src="images/listing-villa.jpg" alt="Property image" class="modal-image-hero" id="modalImg">
+      <div class="modal-body">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+          <div>
+            <h3 style="font-size: 26px; font-weight: 700;" id="modalTitle">Modern 3-Bedroom Villa in Downtown</h3>
+            <p style="color: var(--text-muted); font-size: 15px;" id="modalLocation">Miami, FL • Prime Architectural District</p>
+          </div>
+          <div style="font-size: 24px; font-weight: 800; color: #111;" id="modalPrice">$450,000</div>
+        </div>
+
+        <div class="modal-specs-bar">
+          <div class="spec-pill">
+            <span class="spec-title">Bedrooms</span>
+            <span class="spec-val" id="modalBeds">3 Beds</span>
+          </div>
+          <div class="spec-pill">
+            <span class="spec-title">Bathrooms</span>
+            <span class="spec-val" id="modalBaths">2 Baths</span>
+          </div>
+          <div class="spec-pill">
+            <span class="spec-title">Square Footage</span>
+            <span class="spec-val" id="modalSqft">1,800 Sq. Ft.</span>
+          </div>
+          <div class="spec-pill">
+            <span class="spec-title">Year Built</span>
+            <span class="spec-val">2024</span>
+          </div>
+        </div>
+
+        <p style="font-size: 15px; line-height: 1.7; color: var(--text-muted); margin-bottom: 28px;" id="modalDesc">
+          Featuring open-concept living, custom architectural light wells, imported Italian stone flooring, and expansive smart-home automation. Designed to provide both serenity and effortless entertaining.
+        </p>
+
+        <div style="display: flex; gap: 16px;">
+          <button style="flex: 1; background: #111; color: #fff; padding: 14px; border-radius: 8px; font-weight: 600; font-size: 15px;" onclick="alert('Viewing scheduled! Our concierge will contact you shortly.'); closePropertyModal();">
+            Schedule Private Tour
+          </button>
+          <button style="background: var(--bg-subtle); border: 1px solid var(--border-light); padding: 14px 20px; border-radius: 8px; font-weight: 600; font-size: 15px;" onclick="closePropertyModal()">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

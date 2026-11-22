@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Cities — Realnest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cities-hero {
+      background: #ffffff;
+      padding: 60px 0 30px;
+      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 40px;
+    }
+    .cities-expanded-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 70px;
+    }
+    .city-card-large {
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .city-card-large:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-orange);
+    }
+    .city-card-img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .city-card-body {
+      padding: 24px;
+    }
+    @media (max-width: 1024px) {
+      .cities-expanded-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .cities-expanded-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Realnest</span>
+        </a>
+        <ul class="main-nav">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="listings.html" class="nav-link">Listings</a></li>
+          <li><a href="cities.html" class="nav-link" style="color: var(--accent-orange); font-weight: 800;">Cities</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="header-right">
+          <button class="btn-add-listing" onclick="alert('Add Listing Portal');">Add Listing ↗</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="cities-hero">
+    <div class="container">
+      <span style="font-size: 13px; font-weight: 700; color: var(--accent-orange); text-transform: uppercase;">DESTINATIONS</span>
+      <h1 style="font-family: var(--font-serif); font-size: 46px; font-weight: 600; margin: 8px 0 10px;">Metropolitan Hubs</h1>
+      <p style="color: var(--text-body); font-size: 16px;">Verified inventory across top international cultural and financial capitals.</p>
+    </div>
+  </section>
+
+  <!-- Cities Grid -->
+  <section class="container">
+    <div class="cities-expanded-grid">
+      
+      <div class="city-card-large" onclick="alert('Loading 420+ listings in Stockholm, Sweden...')">
+        <img src="images/city-stockholm.jpg" alt="Stockholm" class="city-card-img">
+        <div class="city-card-body">
+          <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 6px;">Stockholm, Sweden</h3>
+          <p style="color: var(--text-body); font-size: 14px; margin-bottom: 12px;">Scandinavian waterfront apartments and historic Gamla Stan residences.</p>
+          <span style="font-size: 13px; font-weight: 700; color: var(--accent-orange);">420+ Active Listings →</span>
+        </div>
+      </div>
+
+      <div class="city-card-large" onclick="alert('Loading 850+ listings in London, UK...')">
+        <img src="images/city-london.jpg" alt="London" class="city-card-img">
+        <div class="city-card-body">
+          <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 6px;">London, United Kingdom</h3>
+          <p style="color: var(--text-body); font-size: 14px; margin-bottom: 12px;">Mayfair flats, Chelsea townhomes, and modern Thames riverside lofts.</p>
+          <span style="font-size: 13px; font-weight: 700; color: var(--accent-orange);">850+ Active Listings →</span>
+        </div>
+      </div>
+
+      <div class="city-card-large" onclick="alert('Loading 1,200+ listings in New York, USA...')">
+        <img src="images/city-nyc.jpg" alt="New York" class="city-card-img">
+        <div class="city-card-body">
+          <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 6px;">New York City, USA</h3>
+          <p style="color: var(--text-body); font-size: 14px; margin-bottom: 12px;">Manhattan high-rise penthouses, Brooklyn brownstones, and lofts.</p>
+          <span style="font-size: 13px; font-weight: 700; color: var(--accent-orange);">1,200+ Active Listings →</span>
+        </div>
+      </div>
+
+      <div class="city-card-large" onclick="alert('Loading 630+ listings in Paris, France...')">
+        <img src="images/city-paris.jpg" alt="Paris" class="city-card-img">
+        <div class="city-card-body">
+          <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 6px;">Paris, France</h3>
+          <p style="color: var(--text-body); font-size: 14px; margin-bottom: 12px;">Haussmannian classic apartments overlooking the Seine and Montmartre.</p>
+          <span style="font-size: 13px; font-weight: 700; color: var(--accent-orange);">630+ Active Listings →</span>
+        </div>
+      </div>
+
+      <div class="city-card-large" onclick="alert('Loading 380+ listings in Austin, Texas...')">
+        <img src="images/listing-2.jpg" alt="Austin" class="city-card-img">
+        <div class="city-card-body">
+          <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 6px;">Austin, Texas</h3>
+          <p style="color: var(--text-body); font-size: 14px; margin-bottom: 12px;">Modern tech corridor homes and hill country architectural villas.</p>
+          <span style="font-size: 13px; font-weight: 700; color: var(--accent-orange);">380+ Active Listings →</span>
+        </div>
+      </div>
+
+      <div class="city-card-large" onclick="alert('Loading 510+ listings in Honolulu, Hawaii...')">
+        <img src="images/listing-3.jpg" alt="Hawaii" class="city-card-img">
+        <div class="city-card-body">
+          <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 6px;">Honolulu, Hawaii</h3>
+          <p style="color: var(--text-body); font-size: 14px; margin-bottom: 12px;">Tropical coastal estates and oceanfront condominium towers.</p>
+          <span style="font-size: 13px; font-weight: 700; color: var(--accent-orange);">510+ Active Listings →</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none;">
+        <div>© 2026 Realnest Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NRI Wealth & Real Estate Gateway — Aangan Luxury Estates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .nri-banner {
+      background: var(--bg-emerald);
+      color: #ffffff;
+      padding: 90px 0 60px;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    .nri-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+    .nri-card {
+      background: #ffffff;
+      border: 1px solid #e8e2d8;
+      border-radius: 12px;
+      padding: 32px 24px;
+      transition: all 0.25s ease;
+    }
+    .nri-card:hover {
+      border-color: var(--accent-gold);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(13,38,31,0.06);
+    }
+    .nri-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .nri-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--bg-emerald);
+      margin-bottom: 12px;
+    }
+    .nri-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #666;
+    }
+    .repatriation-box {
+      background: #fbf9f4;
+      border: 1px solid #e8e2d8;
+      border-radius: 16px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 70px;
+    }
+    .desks-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 80px;
+    }
+    .desk-card {
+      background: #fff;
+      border: 1px solid #e8e2d8;
+      border-radius: 10px;
+      padding: 24px 18px;
+      text-align: center;
+    }
+    .desk-city {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--bg-emerald);
+      margin-bottom: 4px;
+    }
+    .desk-time {
+      font-size: 11px;
+      color: var(--accent-gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .desk-phone {
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 4px;
+    }
+    @media (max-width: 900px) {
+      .nri-grid { grid-template-columns: 1fr; }
+      .repatriation-box { grid-template-columns: 1fr; }
+      .desks-row { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .desks-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top RERA Bar -->
+  <div class="rera-top-bar">
+    <div class="container">
+      <div class="rera-bar-inner">
+        <div class="rera-badge-item">
+          <span>🏛️</span>
+          <span>100% RERA Registered • MahaRERA | HRERA | K-RERA | TS-RERA</span>
+        </div>
+        <div class="rera-badge-item">
+          <span>☸</span>
+          <span>Certified 100% Vastu Compliant Sky Mansions</span>
+        </div>
+        <div class="rera-badge-item">
+          <span>⭐</span>
+          <span>Private Concierge: <span class="hotline">+91 98200 45678</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-wrap">
+          <div class="brand-title">AANGAN</div>
+          <div class="brand-sub">LUXURY ESTATES • आँगन</div>
+        </a>
+        <ul class="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="residences.html">Residences</a></li>
+          <li><a href="amenities.html">Club & Amenities</a></li>
+          <li><a href="nri-desk.html" style="color: var(--accent-gold); font-weight: 800;">NRI Gateway</a></li>
+          <li><a href="contact.html">Concierge Desk</a></li>
+        </ul>
+        <button class="btn-vip-pickup" onclick="openChauffeurModal()">
+          <span>🚗 Book Site Visit</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="nri-banner">
+    <div class="container">
+      <span class="vastu-pill">DEDICATED CROSS-BORDER ADVISORY</span>
+      <h1 class="hero-heading" style="font-size: 52px; margin: 12px 0 16px;">NRI Global Investment Gateway</h1>
+      <p style="color: rgba(255,255,255,0.8); font-size: 17px; max-width: 650px;">
+        Tailored acquisition protocols for Non-Resident Indians, OCIs, and global diaspora offices seeking prime sovereign real estate assets across India's powerhouse metropolitan zones.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="container">
+    
+    <div style="text-align: center; max-width: 700px; margin: 0 auto 40px;">
+      <span class="vastu-pill">INSTITUTIONAL RIGOR</span>
+      <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 38px; color: var(--bg-emerald); margin: 12px 0;">
+        Frictionless Property Acquisition from Anywhere
+      </h2>
+      <p style="font-size: 15px; color: #666;">
+        From Title Due Diligence to Indian banking compliance (NRE/NRO accounts) and Section 54 tax structuring, our in-house legal counsel handles everything remotely.
+      </p>
+    </div>
+
+    <!-- 3 Pillars Grid -->
+    <div class="nri-grid">
+      <div class="nri-card">
+        <span class="nri-icon">⚖️</span>
+        <h3 class="nri-title">FEMA & RBI Legal Due Diligence</h3>
+        <p class="nri-desc">
+          Complete clearance under the Foreign Exchange Management Act (FEMA). We verify 30-year encumbrance certificates, local municipal clearances, and RERA approvals before any financial commitment.
+        </p>
+      </div>
+
+      <div class="nri-card">
+        <span class="nri-icon">💳</span>
+        <h3 class="nri-title">Repatriation & NRE/NRO Banking</h3>
+        <p class="nri-desc">
+          Direct liaison with HDFC, ICICI, and Citibank private banking desks. Seamless USD/GBP/EUR to INR conversion with Form 15CA/CB support ensuring guaranteed repatriation of sale proceeds and rental yields.
+        </p>
+      </div>
+
+      <div class="nri-card">
+        <span class="nri-icon">👓</span>
+        <h3 class="nri-title">4K Virtual Walkthroughs & PoA</h3>
+        <p class="nri-desc">
+          Inspect properties via live drone feeds and Matterport 3D digital twins. Legal Power of Attorney execution handled through Indian embassies abroad with zero need to travel physically.
+        </p>
+      </div>
+    </div>
+
+    <!-- Repatriation Deep Dive Box -->
+    <div class="repatriation-box">
+      <div>
+        <span class="vastu-pill">CAPITAL GAINS & TAX OPTIMIZATION</span>
+        <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 32px; color: var(--bg-emerald); margin: 14px 0 16px;">
+          Section 54 Rollover Advisory for Diaspora Families
+        </h3>
+        <p style="font-size: 14px; line-height: 1.7; color: #555; margin-bottom: 20px;">
+          Selling ancestral land or legacy apartments in India? Reinvest in ultra-luxury Aangan residences to fully offset capital gains tax under Sections 54 and 54EC of the Indian Income Tax Act.
+        </p>
+        <ul style="font-size: 14px; color: #333; line-height: 2; list-style-type: '✓ '; padding-left: 20px;">
+          <li>Zero TDS surprises — lower tax deduction certificates (Form 13) processed in 14 days.</li>
+          <li>Direct developer escrow agreements for staged RERA payment milestones.</li>
+          <li>Turnkey interior styling and high-yield corporate tenant placement.</li>
+        </ul>
+      </div>
+
+      <div style="background: #ffffff; border: 1px solid #e8e2d8; border-radius: 12px; padding: 28px;">
+        <h4 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; color: var(--bg-emerald); margin-bottom: 16px;">
+          Request NRI Private Advisory Session
+        </h4>
+        <form onsubmit="handleNriSubmit(event)">
+          <div style="margin-bottom: 12px;">
+            <input type="text" required placeholder="Full Name (as per Passport)" style="width: 100%; padding: 10px 14px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px;">
+          </div>
+          <div style="margin-bottom: 12px;">
+            <input type="email" required placeholder="Work / Personal Email" style="width: 100%; padding: 10px 14px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px;">
+          </div>
+          <div style="margin-bottom: 12px;">
+            <input type="tel" required placeholder="Current Country & Phone (e.g. +1 / +44 / +971)" style="width: 100%; padding: 10px 14px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px;">
+          </div>
+          <div style="margin-bottom: 16px;">
+            <select style="width: 100%; padding: 10px 14px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px;">
+              <option>Preferred City: Mumbai (Worli / Bandra)</option>
+              <option>Preferred City: Gurugram (Golf Course Rd)</option>
+              <option>Preferred City: Bengaluru (UB City / Indiranagar)</option>
+              <option>Preferred City: Hyderabad (Jubilee Hills)</option>
+              <option>Preferred City: Goa (Assagao / Candolim)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; padding: 12px; font-size: 14px;">Schedule Confidential Zoom / Call</button>
+        </form>
+        <div id="nriSuccess" style="display:none; margin-top:10px; padding:10px; background:#e8f5e9; color:#2e7d32; border-radius:6px; font-size:12px; text-align:center;">
+          ✓ Inquiry received. An NRI partner will reach out within 4 business hours.
+        </div>
+      </div>
+    </div>
+
+    <!-- Global Enclaves -->
+    <div style="text-align: center; margin-bottom: 30px;">
+      <span class="vastu-pill">INTERNATIONAL TIMEZONE SUPPORT</span>
+      <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 30px; color: var(--bg-emerald); margin-top: 10px;">
+        Aangan Global NRI Desks
+      </h3>
+    </div>
+
+    <div class="desks-row">
+      <div class="desk-card">
+        <div class="desk-city">Dubai, UAE</div>
+        <div class="desk-time">GST (UTC+4)</div>
+        <div class="desk-phone">+971 4 398 2100</div>
+        <p style="font-size: 12px; color: #777;">DIFC Gate Precinct 4</p>
+      </div>
+      <div class="desk-card">
+        <div class="desk-city">London, UK</div>
+        <div class="desk-time">GMT / BST</div>
+        <div class="desk-phone">+44 20 7946 0812</div>
+        <p style="font-size: 12px; color: #777;">Berkeley Square, Mayfair</p>
+      </div>
+      <div class="desk-card">
+        <div class="desk-city">Singapore</div>
+        <div class="desk-time">SGT (UTC+8)</div>
+        <div class="desk-phone">+65 6712 9400</div>
+        <p style="font-size: 12px; color: #777;">Marina Bay Financial Centre</p>
+      </div>
+      <div class="desk-card">
+        <div class="desk-city">San Jose, USA</div>
+        <div class="desk-time">PST (UTC-8)</div>
+        <div class="desk-phone">+1 408 555 0194</div>
+        <p style="font-size: 12px; color: #777;">Santana Row, Silicon Valley</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-title" style="color: #ffffff; font-size: 26px;">AANGAN</div>
+          <div class="brand-sub" style="color: var(--accent-gold); margin-bottom: 16px;">LUXURY ESTATES • आँगन</div>
+          <p style="font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.6);">
+            India's foremost private real estate advisory for ultra-high-net-worth individuals, royal family offices, and leading diaspora leaders worldwide.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Portfolios</h4>
+          <ul class="footer-links">
+            <li><a href="residences.html">Worli Sea Face Pavilions</a></li>
+            <li><a href="residences.html">Golf Course Road Sky Mansions</a></li>
+            <li><a href="residences.html">UB City Penthouses</a></li>
+            <li><a href="residences.html">Jubilee Hills Estates</a></li>
+            <li><a href="residences.html">Assagao Portuguese Villas</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="residences.html">All Residences</a></li>
+            <li><a href="amenities.html">Club & Amenities</a></li>
+            <li><a href="nri-desk.html">NRI Gateway</a></li>
+            <li><a href="contact.html">Concierge Desk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">RERA & Compliance</h4>
+          <p style="font-size: 12px; line-height: 1.7; color: rgba(255,255,255,0.5);">
+            Aangan operates exclusively with RERA-licensed Tier-1 developers. MahaRERA P51800049281 | HRERA 2024/GGM/891 | K-RERA PRM/KA/RERA/1251.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Aangan Luxury Estates Private Limited. All rights reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="color: rgba(255,255,255,0.6);">Privacy Policy</a>
+          <a href="#" style="color: rgba(255,255,255,0.6);">RERA Disclosures</a>
+          <a href="#" style="color: rgba(255,255,255,0.6);">Terms of Engagement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleNriSubmit(e) {
+      e.preventDefault();
+      document.getElementById('nriSuccess').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

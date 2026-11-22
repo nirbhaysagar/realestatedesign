@@ -1,0 +1,805 @@
+/* ==========================================================
+   GRIHADIRECT PROPTECH — Full Flagship Stylesheet
+   Royal Navy (#0e2338), Sunset Saffron (#ff6519), Pure White
+   ========================================================== */
+
+:root {
+  --bg-page: #f5f7fb;
+  --bg-white: #ffffff;
+  --primary-navy: #0e2338;
+  --primary-navy-light: #163654;
+  --accent-saffron: #ff6519;
+  --accent-saffron-hover: #e8550c;
+  --accent-green: #10b981;
+  --text-dark: #0f172a;
+  --text-body: #475569;
+  --text-muted: #94a3b8;
+  --border-light: rgba(226, 232, 240, 0.9);
+  --radius-xl: 24px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --radius-pill: 9999px;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 12px 28px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.12);
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================
+   1. TOP TRUST STRIP
+   ========================================================== */
+.top-trust-bar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-light);
+  padding: 8px 0;
+  font-size: 12px;
+}
+
+.trust-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.trust-badge-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+.trust-badge-pill span.green {
+  color: var(--accent-green);
+}
+
+/* ==========================================================
+   2. HEADER
+   ========================================================== */
+.site-header {
+  background: #ffffff;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-logo-text {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--primary-navy);
+}
+
+.brand-logo-text span {
+  color: var(--accent-saffron);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.main-nav a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.main-nav a:hover {
+  color: var(--accent-saffron);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-post-property {
+  background: #fff;
+  border: 1.5px solid var(--primary-navy);
+  color: var(--primary-navy);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.btn-post-property:hover {
+  background: var(--primary-navy);
+  color: #fff;
+}
+
+.btn-whatsapp-chat {
+  background: #25d366;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+  transition: var(--transition);
+}
+
+.btn-whatsapp-chat:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================
+   3. HERO SEARCH ENGINE (PROPTECH STYLE)
+   ========================================================== */
+.hero-section {
+  background: linear-gradient(180deg, #0e2338 0%, #163654 100%);
+  color: #ffffff;
+  padding: 70px 0 90px;
+  position: relative;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto 36px;
+}
+
+.zero-brokerage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 101, 25, 0.18);
+  border: 1px solid var(--accent-saffron);
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #ff9154;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.hero-title span {
+  color: var(--accent-saffron);
+}
+
+.hero-subtitle {
+  font-size: 16.5px;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* PropTech Interactive Search Widget */
+.search-widget-container {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 24px 28px;
+  box-shadow: var(--shadow-lg);
+  max-width: 1040px;
+  margin: 0 auto;
+  color: var(--text-dark);
+}
+
+.search-tabs-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 12px;
+}
+
+.search-tab-pill {
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-body);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.search-tab-pill.active {
+  background: var(--primary-navy);
+  color: #ffffff;
+}
+
+.search-form-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1.2fr 1fr 140px;
+  gap: 16px;
+  align-items: center;
+}
+
+.search-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.search-cell label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.search-select-box {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.search-select-box select {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.btn-search-main {
+  background: var(--accent-saffron);
+  color: #ffffff;
+  padding: 13px;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: var(--transition);
+  box-shadow: 0 4px 16px rgba(255, 101, 25, 0.35);
+  height: 48px;
+}
+
+.btn-search-main:hover {
+  background: var(--accent-saffron-hover);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================
+   4. BHK QUICK FILTER PILLS
+   ========================================================== */
+.bhk-filters-bar {
+  padding: 24px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.bhk-pill {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.bhk-pill.active, .bhk-pill:hover {
+  background: var(--primary-navy);
+  color: #ffffff;
+  border-color: var(--primary-navy);
+}
+
+/* ==========================================================
+   5. VERIFIED DEVELOPER PROJECTS (6 CARDS)
+   ========================================================== */
+.projects-section {
+  padding: 70px 0 80px;
+}
+
+.section-head-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary-navy);
+  letter-spacing: -0.03em;
+}
+
+.section-sub {
+  font-size: 14.5px;
+  color: var(--text-body);
+  margin-top: 4px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.prop-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.prop-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-saffron);
+}
+
+.prop-thumb-box {
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+}
+
+.prop-thumb-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.prop-card:hover .prop-thumb-box img {
+  transform: scale(1.05);
+}
+
+.badge-builder {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ffffff;
+  color: var(--primary-navy);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.badge-zero-brokerage {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--accent-green);
+  color: #ffffff;
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.prop-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.prop-price-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.prop-price {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary-navy);
+}
+
+.prop-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.prop-locality {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.prop-specs-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.spec-chip {
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-body);
+}
+
+.prop-card-btns {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.btn-schedule-visit {
+  flex: 1;
+  background: var(--primary-navy);
+  color: #ffffff;
+  padding: 11px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.btn-schedule-visit:hover {
+  background: var(--primary-navy-light);
+}
+
+.btn-whatsapp-icon {
+  width: 42px;
+  height: 42px;
+  background: #25d366;
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: var(--transition);
+}
+
+.btn-whatsapp-icon:hover {
+  background: #20ba5a;
+}
+
+/* ==========================================================
+   6. COMPARISON SECTION (GRIHADIRECT VS TRADITIONAL BROKER)
+   ========================================================== */
+.comparison-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.comp-card {
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  border: 1px solid var(--border-light);
+}
+
+.comp-card.highlight {
+  background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+  border: 2px solid var(--accent-green);
+}
+
+.comp-card.traditional {
+  background: #f8fafc;
+}
+
+.comp-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comp-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comp-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+/* ==========================================================
+   7. ALL-INCLUSIVE ON-ROAD COST CALCULATOR (STAMP DUTY + GST)
+   ========================================================== */
+.cost-calculator-section {
+  padding: 80px 0;
+  background: var(--bg-page);
+}
+
+.cost-calc-card {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+}
+
+.cost-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.cost-result-table {
+  background: #f8fafc;
+  border-radius: var(--radius-md);
+  padding: 24px;
+  border: 1px solid var(--border-light);
+}
+
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 14px;
+}
+
+.cost-row.total {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--primary-navy);
+  border-bottom: none;
+  padding-top: 16px;
+}
+
+/* ==========================================================
+   8. BANK PARTNERS & REVIEWS
+   ========================================================== */
+.banks-section {
+  padding: 60px 0;
+  text-align: center;
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.banks-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.bank-item {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primary-navy);
+  background: #f1f5f9;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+}
+
+.reviews-section {
+  padding: 80px 0;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.review-card {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 28px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.review-stars {
+  color: #f59e0b;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.review-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-body);
+  margin-bottom: 18px;
+}
+
+.reviewer-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviewer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ==========================================================
+   9. FOOTER
+   ========================================================== */
+.site-footer {
+  background: var(--primary-navy);
+  color: #ffffff;
+  padding: 60px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-col h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--accent-saffron);
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col a {
+  font-size: 13.5px;
+  color: #94a3b8;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* ==========================================================
+   RESPONSIVE DESIGN (MOBILE SPECIFIC)
+   ========================================================== */
+@media (max-width: 1024px) {
+  .hero-title { font-size: 40px; }
+  .search-form-grid { grid-template-columns: 1fr 1fr; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .comparison-grid { grid-template-columns: 1fr; }
+  .cost-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 16px; }
+  .main-nav { display: none; }
+  .hero-title { font-size: 32px; }
+  .search-form-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .cost-calc-card { padding: 24px 16px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+}

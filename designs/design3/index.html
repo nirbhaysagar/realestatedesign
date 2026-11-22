@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realnest — Buy, Rent & Sell Property</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== 1. SITE HEADER ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        
+        <!-- Logo -->
+        <a href="#" class="brand-logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Realnest</span>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="main-nav">
+          <li><a href="index.html" class="nav-link" style="color: var(--accent-orange); font-weight: 800;">Home</a></li>
+          <li><a href="listings.html" class="nav-link">Listings</a></li>
+          <li><a href="cities.html" class="nav-link">Cities</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Right Header Actions -->
+        <div class="header-right">
+          <a href="#" class="btn-login" onclick="alert('Login / Sign up portal');">Login / Sign Up</a>
+          <button class="btn-add-listing" onclick="alert('Add Listing Wizard opened.');">
+            <span>Add Listing</span>
+            <span>↗</span>
+          </button>
+          <div class="btn-filter-icon" title="Preferences">
+            ⚙
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==================== 2. HERO SECTION ==================== -->
+  <section class="hero-wrapper">
+    <div class="container">
+      <div class="hero-box">
+        
+        <!-- Left Hero Serif Content -->
+        <div class="hero-left-content">
+          <h1 class="hero-serif-title">
+            Buy,Rent, & Sell<br>Property
+          </h1>
+          <a href="#listings" class="btn-explore-white">
+            <span>Explore All Property</span>
+            <span>↗</span>
+          </a>
+        </div>
+
+        <!-- Right Floating Search Widget -->
+        <div class="hero-search-card">
+          <div class="search-card-heading">
+            Find your Best Property<br>what do you want!
+          </div>
+
+          <!-- Location Field -->
+          <div class="search-input-group">
+            <label>Location</label>
+            <div class="search-field-box">
+              <span>📍</span>
+              <select id="heroLocation">
+                <option value="stockholm">Stockholm, Sweden</option>
+                <option value="london">London, UK</option>
+                <option value="nyc">New York, USA</option>
+                <option value="paris">Paris, France</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Property Type Field -->
+          <div class="search-input-group">
+            <label>Property Type</label>
+            <div class="search-field-box">
+              <span>🏠</span>
+              <select id="heroType">
+                <option value="apartment">Apartment</option>
+                <option value="villa">Luxury Villa</option>
+                <option value="commercial">Commercial Space</option>
+                <option value="manor">Historic Manor</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Specs row mini -->
+          <div class="specs-row-mini">
+            <span>🛏 4 Beds</span>
+            <span>🚿 2 Bathroom</span>
+            <span>📐 4x7.5 m²</span>
+          </div>
+
+          <!-- Max Price -->
+          <div class="search-input-group">
+            <label>Max Price</label>
+            <div class="search-field-box">
+              <span>🏷️</span>
+              <span style="font-weight: 700; color: #111;">$590.00 max</span>
+            </div>
+          </div>
+
+          <button class="btn-search-orange" onclick="filterListings()">
+            Search
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 3. SOCIAL PROOF & LOGOS ==================== -->
+  <section class="trust-section" id="trust">
+    <div class="container">
+      
+      <div class="trust-grid">
+        <!-- Left: 1250+ Companies -->
+        <div>
+          <h2 class="trust-title">
+            1250+ Companies<br>Trust by us.
+          </h2>
+          <div class="trust-avatars-row">
+            <div class="avatars-stack">
+              <div class="avatar-mini" style="background-image: url('images/city-stockholm.jpg'); background-size: cover;"></div>
+              <div class="avatar-mini" style="background-image: url('images/city-london.jpg'); background-size: cover;"></div>
+              <div class="avatar-mini" style="background-image: url('images/city-nyc.jpg'); background-size: cover;"></div>
+              <div class="avatar-mini" style="background: #f25a2b; color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center;">+</div>
+            </div>
+            <div class="rating-badge">
+              12k rating <strong>(4.7)</strong>
+            </div>
+            <span style="font-size: 24px; color: #f25a2b;">✱</span>
+          </div>
+        </div>
+
+        <!-- Right: Text & Callback -->
+        <div>
+          <p class="trust-desc">
+            Your leading real estate advocate, transforming houses into dreams. Trust us to expertly guide you home. 45,000 apartments & home for sell, rent & mortgage.
+          </p>
+          <div class="trust-action-btns">
+            <a href="#listings" class="btn-more-listing">More Listing</a>
+            <a href="#" class="link-callback" onclick="alert('A senior Realnest advisor will call you within 15 minutes.');">
+              <span>Request a Callback</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Partner Logos -->
+      <div class="logos-row">
+        <div class="logo-item">G grammarly</div>
+        <div class="logo-item">◫ Linear</div>
+        <div class="logo-item">coinbase</div>
+        <div class="logo-item">webflow</div>
+        <div class="logo-item">🔥 tinder</div>
+        <div class="logo-item">Uber</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 4. POPULAR LISTINGS (6 CARDS) ==================== -->
+  <section class="listings-section" id="listings">
+    <div class="container">
+      
+      <div class="listings-header">
+        <div>
+          <h2 class="section-main-title">Popular Listings</h2>
+          <p class="section-sub-text">Explore latest and featured properties for sell, rent & mortgage</p>
+        </div>
+        <a href="#listings" class="btn-explore-all">
+          <span>Explore All</span>
+          <span>↗</span>
+        </a>
+      </div>
+
+      <div class="listings-grid">
+        
+        <!-- Card 1 -->
+        <div class="listing-item-card" onclick="openDetails('Silverwood Manor', '$3,095 /month', '6391 Elgin St. Celina, Delaware 10299', 'images/listing-1.jpg')">
+          <div class="card-img-holder">
+            <img src="images/listing-1.jpg" alt="Silverwood Manor">
+            <button class="like-btn" onclick="event.stopPropagation(); toggleLike(this)">♥</button>
+          </div>
+          <div class="card-body-content">
+            <div class="price-row">
+              <span class="price-val">$3,095</span>
+              <span class="price-unit">/month</span>
+            </div>
+            <h3 class="property-name">Silverwood Manor</h3>
+            <p class="property-address">6391 Elgin St. Celina, Delaware 10299</p>
+            <div class="property-specs-line">
+              <span>🛏 3 Beds</span>
+              <span>🚿 2 Bathrooms</span>
+              <span>📐 5x7 m²</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="listing-item-card" onclick="openDetails('Palmstone Residences', '$2,500 /month', '1901 Thornridge Cir. Shiloh, Hawaii 81063', 'images/listing-2.jpg')">
+          <div class="card-img-holder">
+            <img src="images/listing-2.jpg" alt="Palmstone Residences">
+            <button class="like-btn" onclick="event.stopPropagation(); toggleLike(this)">♥</button>
+          </div>
+          <div class="card-body-content">
+            <div class="price-row">
+              <span class="price-val">$2,500</span>
+              <span class="price-unit">/month</span>
+            </div>
+            <h3 class="property-name">Palmstone Residences</h3>
+            <p class="property-address">1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+            <div class="property-specs-line">
+              <span>🛏 4 Beds</span>
+              <span>🚿 3 Bathrooms</span>
+              <span>📐 5x7.5 m²</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="listing-item-card" onclick="openDetails('Cedar Grove Estate', '$3,550 /month', '1901 Thornridge Cir. Shiloh, Hawaii 81063', 'images/listing-3.jpg')">
+          <div class="card-img-holder">
+            <img src="images/listing-3.jpg" alt="Cedar Grove Estate">
+            <button class="like-btn" onclick="event.stopPropagation(); toggleLike(this)">♥</button>
+          </div>
+          <div class="card-body-content">
+            <div class="price-row">
+              <span class="price-val">$3,550</span>
+              <span class="price-unit">/month</span>
+            </div>
+            <h3 class="property-name">Cedar Grove Estate</h3>
+            <p class="property-address">1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+            <div class="property-specs-line">
+              <span>🛏 3 Beds</span>
+              <span>🚿 3 Bathrooms</span>
+              <span>📐 6x8.2 m²</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="listing-item-card" onclick="openDetails('Hillside Haven', '$1,400 /month', '3517 W. Gray St. Utica, Pennsylvania 57867', 'images/listing-4.jpg')">
+          <div class="card-img-holder">
+            <img src="images/listing-4.jpg" alt="Hillside Haven">
+            <button class="like-btn" onclick="event.stopPropagation(); toggleLike(this)">♥</button>
+          </div>
+          <div class="card-body-content">
+            <div class="price-row">
+              <span class="price-val">$1,400</span>
+              <span class="price-unit">/month</span>
+            </div>
+            <h3 class="property-name">Hillside Haven</h3>
+            <p class="property-address">3517 W. Gray St. Utica, Pennsylvania 57867</p>
+            <div class="property-specs-line">
+              <span>🛏 4 Beds</span>
+              <span>🚿 2 Bathrooms</span>
+              <span>📐 5x7 m²</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="listing-item-card" onclick="openDetails('The Oakridge Villa', '$2,500 /month', '243 Curlew Road, Palm Harbor, TX', 'images/listing-5.jpg')">
+          <div class="card-img-holder">
+            <img src="images/listing-5.jpg" alt="The Oakridge Villa">
+            <button class="like-btn" onclick="event.stopPropagation(); toggleLike(this)">♥</button>
+          </div>
+          <div class="card-body-content">
+            <div class="price-row">
+              <span class="price-val">$2,500</span>
+              <span class="price-unit">/month</span>
+            </div>
+            <h3 class="property-name">The Oakridge Villa</h3>
+            <p class="property-address">243 Curlew Road, Palm Harbor, TX</p>
+            <div class="property-specs-line">
+              <span>🛏 2 Beds</span>
+              <span>🚿 1 Bathrooms</span>
+              <span>📐 5x7.5 m²</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="listing-item-card" onclick="openDetails('Bluebell Heights', '$1,500 /month', '3517 W. Gray St. Utica, Pennsylvania 57867', 'images/listing-6.jpg')">
+          <div class="card-img-holder">
+            <img src="images/listing-6.jpg" alt="Bluebell Heights">
+            <button class="like-btn" onclick="event.stopPropagation(); toggleLike(this)">♥</button>
+          </div>
+          <div class="card-body-content">
+            <div class="price-row">
+              <span class="price-val">$1,500</span>
+              <span class="price-unit">/month</span>
+            </div>
+            <h3 class="property-name">Bluebell Heights</h3>
+            <p class="property-address">3517 W. Gray St. Utica, Pennsylvania 57867</p>
+            <div class="property-specs-line">
+              <span>🛏 3 Beds</span>
+              <span>🚿 1 Bathrooms</span>
+              <span>📐 5x7 m²</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination Controls -->
+      <div class="pagination-row">
+        <button class="page-btn">‹</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">›</button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 5. POPULAR CITIES ==================== -->
+  <section class="cities-section" id="cities">
+    <div class="container">
+      
+      <div class="listings-header">
+        <div>
+          <h2 class="section-main-title">Popular Cities</h2>
+          <p class="section-sub-text">Explore high-demand properties in top global metropolitan hubs</p>
+        </div>
+        <a href="#cities" class="btn-explore-all">
+          <span>Explore All</span>
+          <span>↗</span>
+        </a>
+      </div>
+
+      <div class="cities-grid">
+        <div class="city-pill-card" onclick="alert('Viewing 420+ properties in Stockholm, Sweden')">
+          <img src="images/city-stockholm.jpg" alt="Stockholm" class="city-thumb">
+          <div>
+            <div class="city-name">Stockholm</div>
+            <div class="city-count">420+ Properties</div>
+          </div>
+        </div>
+
+        <div class="city-pill-card" onclick="alert('Viewing 850+ properties in London, UK')">
+          <img src="images/city-london.jpg" alt="London" class="city-thumb">
+          <div>
+            <div class="city-name">London</div>
+            <div class="city-count">850+ Properties</div>
+          </div>
+        </div>
+
+        <div class="city-pill-card" onclick="alert('Viewing 1,200+ properties in New York, USA')">
+          <img src="images/city-nyc.jpg" alt="New York" class="city-thumb">
+          <div>
+            <div class="city-name">New York</div>
+            <div class="city-count">1,200+ Properties</div>
+          </div>
+        </div>
+
+        <div class="city-pill-card" onclick="alert('Viewing 630+ properties in Paris, France')">
+          <img src="images/city-paris.jpg" alt="Paris" class="city-thumb">
+          <div>
+            <div class="city-name">Paris</div>
+            <div class="city-count">630+ Properties</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 6. FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="#" class="brand-logo" style="margin-bottom: 14px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Realnest</span>
+          </a>
+          <p style="color: var(--text-body); font-size: 14px; line-height: 1.6; max-width: 320px;">
+            Your leading real estate advocate. Seamlessly buying, renting, and managing properties with verified security and transparent pricing.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Popular Searches</h4>
+          <ul>
+            <li><a href="listings.html">Apartment for Rent</a></li>
+            <li><a href="listings.html">Family Villas</a></li>
+            <li><a href="listings.html">Offices for Buy</a></li>
+            <li><a href="cities.html">Stockholm & London Hubs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listings.html">Browse Properties</a></li>
+            <li><a href="cities.html">Popular Cities</a></li>
+            <li><a href="about.html">About Realnest</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Information</h4>
+          <ul>
+            <li><span style="font-weight: 700;">+1 (800) 245-8910</span></li>
+            <li><span>support@realnest.com</span></li>
+            <li><span>Stockholm & New York Offices</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Realnest Inc. All rights reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Notice</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleLike(btn) {
+      if (btn.style.color === 'rgb(230, 57, 70)') {
+        btn.style.color = '#999';
+      } else {
+        btn.style.color = '#e63946';
+      }
+    }
+
+    function openDetails(name, price, address, img) {
+      alert(`Property: ${name}\nPrice: ${price}\nLocation: ${address}\n\nFeatures 3-4 Beds, 2+ Baths, and Smart Climate Control.`);
+    }
+
+    function filterListings() {
+      const loc = document.getElementById('heroLocation').value;
+      const type = document.getElementById('heroType').value;
+      alert(`Filtering listings for ${type} in ${loc}. 6 matching verified properties found!`);
+      const target = document.getElementById('listings');
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

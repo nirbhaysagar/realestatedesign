@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Realnest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-hero {
+      background: #ffffff;
+      padding: 60px 0 40px;
+      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 50px;
+    }
+    .contact-box-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      margin-bottom: 70px;
+    }
+    .form-box-realnest {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 36px;
+      box-shadow: var(--shadow-sm);
+    }
+    @media (max-width: 768px) {
+      .contact-box-grid { grid-template-columns: 1fr; }
+      .form-box-realnest { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Realnest</span>
+        </a>
+        <ul class="main-nav">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="listings.html" class="nav-link">Listings</a></li>
+          <li><a href="cities.html" class="nav-link">Cities</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link" style="color: var(--accent-orange); font-weight: 800;">Contact</a></li>
+        </ul>
+        <div class="header-right">
+          <button class="btn-add-listing" onclick="alert('Add Listing Portal');">Add Listing ↗</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="contact-hero">
+    <div class="container">
+      <span style="font-size: 13px; font-weight: 700; color: var(--accent-orange); text-transform: uppercase;">GET IN TOUCH</span>
+      <h1 style="font-family: var(--font-serif); font-size: 46px; font-weight: 600; margin: 8px 0 10px;">We're Here to Guide You Home</h1>
+      <p style="color: var(--text-body); font-size: 16px;">Have questions about buying, selling, or booking a property tour? Reach out directly.</p>
+    </div>
+  </section>
+
+  <!-- Form & Details -->
+  <section class="container">
+    <div class="contact-box-grid">
+      <div>
+        <h2 style="font-size: 26px; font-weight: 800; margin-bottom: 20px;">Support & Contact Channels</h2>
+        
+        <div style="background: #ffffff; padding: 22px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); margin-bottom: 16px;">
+          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Direct Phone Assistance</h3>
+          <p style="color: var(--text-body); font-size: 14px;">Toll-free: +1 (800) 245-8910 (24/7 Support)</p>
+        </div>
+
+        <div style="background: #ffffff; padding: 22px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); margin-bottom: 16px;">
+          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Email Desk</h3>
+          <p style="color: var(--text-body); font-size: 14px;">Inquiries: support@realnest.com</p>
+        </div>
+
+        <div style="background: #ffffff; padding: 22px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Offices</h3>
+          <p style="color: var(--text-body); font-size: 14px;">Stockholm • London • New York City</p>
+        </div>
+      </div>
+
+      <div class="form-box-realnest">
+        <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 16px;">Send Us a Message</h3>
+        <form onsubmit="event.preventDefault(); alert('Message sent! Our support team will get back to you shortly.'); this.reset();" style="display: flex; flex-direction: column; gap: 16px;">
+          <div>
+            <label style="font-size: 12px; font-weight: 700; color: var(--text-dark);">Your Name</label>
+            <input type="text" required placeholder="e.g. Clara Lindqvist" style="width: 100%; padding: 12px; border: 1px solid var(--border-light); border-radius: 6px; margin-top: 4px; font-size: 14px;">
+          </div>
+          <div>
+            <label style="font-size: 12px; font-weight: 700; color: var(--text-dark);">Email Address</label>
+            <input type="email" required placeholder="clara@example.com" style="width: 100%; padding: 12px; border: 1px solid var(--border-light); border-radius: 6px; margin-top: 4px; font-size: 14px;">
+          </div>
+          <div>
+            <label style="font-size: 12px; font-weight: 700; color: var(--text-dark);">Interested City / Property</label>
+            <input type="text" placeholder="e.g. Stockholm 2-Beds • Rent" style="width: 100%; padding: 12px; border: 1px solid var(--border-light); border-radius: 6px; margin-top: 4px; font-size: 14px;">
+          </div>
+          <div>
+            <label style="font-size: 12px; font-weight: 700; color: var(--text-dark);">Message</label>
+            <textarea rows="4" placeholder="How can we assist your property journey?" style="width: 100%; padding: 12px; border: 1px solid var(--border-light); border-radius: 6px; margin-top: 4px; font-size: 14px; font-family: inherit;"></textarea>
+          </div>
+          <button type="submit" class="btn-search-orange" style="margin-top: 4px;">
+            Submit Inquiry
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none;">
+        <div>© 2026 Realnest Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

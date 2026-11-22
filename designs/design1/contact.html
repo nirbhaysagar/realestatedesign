@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Poperty Architectural Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-banner {
+      background: #111111;
+      color: #ffffff;
+      padding: 120px 0 60px;
+    }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      padding: 80px 0;
+    }
+    .office-card {
+      background: #fafafa;
+      padding: 24px;
+      border-radius: var(--radius-md);
+      margin-bottom: 20px;
+      border: 1px solid var(--border-light);
+    }
+    .contact-form-box {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+    }
+    @media (max-width: 768px) {
+      .contact-layout { grid-template-columns: 1fr; padding: 40px 0; }
+      .contact-form-box { padding: 24px; }
+      .page-banner { padding: 90px 0 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="site-header" style="background: #111111; padding: 20px 32px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <a href="index.html" class="brand-logo">Poperty</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="properties.html">Properties</a>
+      <a href="about.html">About Us</a>
+      <a href="index.html#featured">Featured</a>
+      <a href="index.html#testimonials">Testimonials</a>
+      <a href="contact.html" style="color: #fff; font-weight: 700;">Contact</a>
+    </nav>
+    <a href="properties.html" class="header-cta-btn">
+      <span>Browse Portfolio</span>
+      <span class="btn-arrow-circle">↗</span>
+    </a>
+  </header>
+
+  <!-- Banner -->
+  <section class="page-banner">
+    <div class="container">
+      <span style="font-size: 13px; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 0.08em;">Private Inquiries</span>
+      <h1 style="font-size: 46px; font-weight: 800; letter-spacing: -0.03em; margin: 10px 0 16px;">Initiate Your Acquisition</h1>
+      <p style="color: rgba(255,255,255,0.7); font-size: 16px; max-width: 600px;">
+        Connect with our senior partners for private off-market listings, architectural tours, or discreet property disposition.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Form & Studio Locations -->
+  <section class="container">
+    <div class="contact-layout">
+      
+      <!-- Studio Offices -->
+      <div>
+        <h2 style="font-size: 30px; font-weight: 800; margin-bottom: 24px;">Our Studio Enclaves</h2>
+        
+        <div class="office-card">
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px;">Miami Studio (HQ)</h3>
+          <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 8px;">1100 Brickell Bay Drive, Suite 2400, Miami, FL 33131</p>
+          <p style="font-size: 13.5px; font-weight: 600;">miami@poperty.com • +1 (305) 980-4200</p>
+        </div>
+
+        <div class="office-card">
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px;">New York Atelier</h3>
+          <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 8px;">450 West 14th Street, Meatpacking District, New York, NY 10014</p>
+          <p style="font-size: 13.5px; font-weight: 600;">nyc@poperty.com • +1 (212) 840-3100</p>
+        </div>
+
+        <div class="office-card">
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px;">Austin Innovation Studio</h3>
+          <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 8px;">200 Congress Avenue, Downtown Austin, TX 78701</p>
+          <p style="font-size: 13.5px; font-weight: 600;">austin@poperty.com • +1 (512) 470-1900</p>
+        </div>
+      </div>
+
+      <!-- Form Box -->
+      <div class="contact-form-box">
+        <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 8px;">Private Consultation Request</h3>
+        <p style="color: var(--text-muted); font-size: 14.5px; margin-bottom: 24px;">Our team guarantees strict discretion and responds within two business hours.</p>
+
+        <form onsubmit="event.preventDefault(); alert('Consultation request received! A senior partner will contact you shortly.'); this.reset();" style="display: flex; flex-direction: column; gap: 18px;">
+          <div>
+            <label style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Full Name</label>
+            <input type="text" required placeholder="e.g. Jonathan Sterling" style="width: 100%; padding: 12px 14px; border: 1px solid var(--border-light); border-radius: 8px; margin-top: 6px; font-size: 14px; outline: none;">
+          </div>
+          <div>
+            <label style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Direct Email</label>
+            <input type="email" required placeholder="jonathan@sterling.com" style="width: 100%; padding: 12px 14px; border: 1px solid var(--border-light); border-radius: 8px; margin-top: 6px; font-size: 14px; outline: none;">
+          </div>
+          <div>
+            <label style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Interested Property / Area</label>
+            <input type="text" placeholder="e.g. Modernist Villa in Miami • Budget: $2M - $5M" style="width: 100%; padding: 12px 14px; border: 1px solid var(--border-light); border-radius: 8px; margin-top: 6px; font-size: 14px; outline: none;">
+          </div>
+          <div>
+            <label style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Message or Timeline</label>
+            <textarea rows="4" placeholder="Tell us about your requirements, timeline, or preferred showing dates..." style="width: 100%; padding: 12px 14px; border: 1px solid var(--border-light); border-radius: 8px; margin-top: 6px; font-size: 14px; outline: none; font-family: inherit;"></textarea>
+          </div>
+          <button type="submit" style="background: #111111; color: #ffffff; padding: 14px; border-radius: 8px; font-weight: 700; font-size: 15px; cursor: pointer; transition: all 0.2s ease;">
+            Transmit Inquiry →
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div>© 2026 Poperty Real Estate Inc. All rights reserved.</div>
+        <div>Private Architectural Advisory</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

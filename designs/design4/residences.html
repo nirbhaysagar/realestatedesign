@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Residences — Aangan Luxury Estates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .residences-banner {
+      background: var(--bg-emerald);
+      color: #ffffff;
+      padding: 90px 0 60px;
+      margin-bottom: 50px;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top RERA Bar -->
+  <div class="rera-top-bar">
+    <div class="container">
+      <div class="rera-bar-inner">
+        <div class="rera-badge-item">
+          <span>🏛️</span>
+          <span>100% RERA Registered • MahaRERA | HRERA | K-RERA | TS-RERA</span>
+        </div>
+        <div class="rera-badge-item">
+          <span>☸</span>
+          <span>Certified 100% Vastu Compliant Sky Mansions</span>
+        </div>
+        <div class="rera-badge-item">
+          <span>⭐</span>
+          <span>Private Concierge: <span class="hotline">+91 98200 45678</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-wrap">
+          <div class="brand-title">AANGAN</div>
+          <div class="brand-sub">LUXURY ESTATES • आँगन</div>
+        </a>
+        <ul class="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="residences.html" style="color: var(--accent-gold); font-weight: 800;">Residences</a></li>
+          <li><a href="amenities.html">Club & Amenities</a></li>
+          <li><a href="nri-desk.html">NRI Gateway</a></li>
+          <li><a href="contact.html">Concierge Desk</a></li>
+        </ul>
+        <button class="btn-vip-pickup" onclick="openChauffeurModal()">
+          <span>🚗 Book Site Visit</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="residences-banner">
+    <div class="container">
+      <span class="vastu-pill">CERTIFIED ULTRA-LUXURY INVENTORY</span>
+      <h1 class="hero-heading" style="font-size: 52px; margin: 12px 0 16px;">Landmark Sky Mansions & Villas</h1>
+      <p style="color: rgba(255,255,255,0.8); font-size: 17px; max-width: 650px;">
+        Curating India's most prestigious 3, 4 & 5 BHK addresses. Verified clear titles, authentic Vastu orientation, and institutional builder partnerships.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter & Estates Grid -->
+  <section class="container" style="margin-bottom: 80px;">
+    
+    <div class="cities-nav-bar" style="margin-bottom: 40px;">
+      <button class="city-tab-btn active" onclick="filterCity('all', this)"><span>🇮🇳 All Metros (6)</span></button>
+      <button class="city-tab-btn" onclick="filterCity('mumbai', this)"><span>🌊 Mumbai (2)</span></button>
+      <button class="city-tab-btn" onclick="filterCity('gurgaon', this)"><span>⛳ Gurugram (1)</span></button>
+      <button class="city-tab-btn" onclick="filterCity('bengaluru', this)"><span>🌳 Bengaluru (1)</span></button>
+      <button class="city-tab-btn" onclick="filterCity('hyderabad', this)"><span>💎 Hyderabad (1)</span></button>
+      <button class="city-tab-btn" onclick="filterCity('goa', this)"><span>🏖️ Goa (1)</span></button>
+    </div>
+
+    <div class="estates-grid" id="estatesGrid">
+      
+      <!-- Card 1 -->
+      <div class="estate-card" data-city="mumbai" onclick="openDossier('The Worli Sea View Pavilion', 'Worli Sea Face, Mumbai', '₹12.50 Cr', '4 & 5 BHK', '4,800 Sq. Ft.', 'MahaRERA: P51800049281', 'images/villa-mumbai.jpg')">
+        <div class="estate-img-wrap">
+          <img src="images/villa-mumbai.jpg" alt="Worli Sea Face Residence">
+          <div class="badge-rera">MahaRERA: P51800049281</div>
+          <div class="badge-status">Ready to Move In</div>
+        </div>
+        <div class="estate-body">
+          <div class="estate-price-row">
+            <div class="estate-price">₹12.50 Cr <span style="font-size: 13px; font-weight: 500; color: #777;">onwards</span></div>
+            <div class="estate-emi-tag">EMI: ~₹9.8L/mo</div>
+          </div>
+          <h3 class="estate-title">The Worli Sea View Pavilion</h3>
+          <p class="estate-location">Worli Sea Face, South Mumbai</p>
+          <div class="estate-features-row">
+            <span>🛏 4 & 5 BHK</span>
+            <span>📐 4,800 Sq. Ft.</span>
+            <span>☸ East Facing</span>
+          </div>
+          <button class="btn-book-site-visit" onclick="event.stopPropagation(); openChauffeurModal('The Worli Sea View Pavilion');">
+            Request Private Walkthrough →
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="estate-card" data-city="gurgaon" onclick="openDossier('The Camellias Reserve', 'Golf Course Road, Gurugram', '₹8.75 Cr', '4 BHK Duplex', '5,600 Sq. Ft.', 'HRERA: GGM/2024/112', 'images/villa-gurgaon.jpg')">
+        <div class="estate-img-wrap">
+          <img src="images/villa-gurgaon.jpg" alt="The Camellias Reserve">
+          <div class="badge-rera">HRERA: GGM/2024/112</div>
+          <div class="badge-status">Possession Q1 2026</div>
+        </div>
+        <div class="estate-body">
+          <div class="estate-price-row">
+            <div class="estate-price">₹8.75 Cr <span style="font-size: 13px; font-weight: 500; color: #777;">onwards</span></div>
+            <div class="estate-emi-tag">EMI: ~₹6.9L/mo</div>
+          </div>
+          <h3 class="estate-title">The Camellias Reserve</h3>
+          <p class="estate-location">Golf Course Road, Gurugram (NCR)</p>
+          <div class="estate-features-row">
+            <span>🛏 4 BHK Duplex</span>
+            <span>📐 5,600 Sq. Ft.</span>
+            <span>⛳ Golf Facing</span>
+          </div>
+          <button class="btn-book-site-visit" onclick="event.stopPropagation(); openChauffeurModal('The Camellias Reserve Gurugram');">
+            Request Private Walkthrough →
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="estate-card" data-city="bengaluru" onclick="openDossier('Sobha Emerald Mansions', 'Lavelle Road, Bengaluru', '₹5.20 Cr', '3 & 4 BHK', '3,450 Sq. Ft.', 'PRM/KA/RERA/1251', 'images/villa-bangalore.jpg')">
+        <div class="estate-img-wrap">
+          <img src="images/villa-bangalore.jpg" alt="Sobha Emerald Mansions">
+          <div class="badge-rera">PRM/KA/RERA/1251</div>
+          <div class="badge-status">Ready to Move In</div>
+        </div>
+        <div class="estate-body">
+          <div class="estate-price-row">
+            <div class="estate-price">₹5.20 Cr <span style="font-size: 13px; font-weight: 500; color: #777;">onwards</span></div>
+            <div class="estate-emi-tag">EMI: ~₹4.1L/mo</div>
+          </div>
+          <h3 class="estate-title">Sobha Emerald Mansions</h3>
+          <p class="estate-location">Lavelle Road / Hebbal, Bengaluru</p>
+          <div class="estate-features-row">
+            <span>🛏 3 & 4 BHK</span>
+            <span>📐 3,450 Sq. Ft.</span>
+            <span>☸ North-East Facing</span>
+          </div>
+          <button class="btn-book-site-visit" onclick="event.stopPropagation(); openChauffeurModal('Sobha Emerald Mansions Bengaluru');">
+            Request Private Walkthrough →
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="estate-card" data-city="hyderabad" onclick="openDossier('The Kohinoor Sky Duplex', 'Jubilee Hills, Hyderabad', '₹9.60 Cr', '5 BHK Duplex', '6,200 Sq. Ft.', 'TS-RERA: P02400007812', 'images/estate-hyderabad.jpg')">
+        <div class="estate-img-wrap">
+          <img src="images/estate-hyderabad.jpg" alt="Kohinoor Sky Duplex Hyderabad">
+          <div class="badge-rera">TS-RERA: P02400007812</div>
+          <div class="badge-status">Ready to Move In</div>
+        </div>
+        <div class="estate-body">
+          <div class="estate-price-row">
+            <div class="estate-price">₹9.60 Cr <span style="font-size: 13px; font-weight: 500; color: #777;">onwards</span></div>
+            <div class="estate-emi-tag">EMI: ~₹7.6L/mo</div>
+          </div>
+          <h3 class="estate-title">The Kohinoor Sky Duplex</h3>
+          <p class="estate-location">Jubilee Hills, Hyderabad</p>
+          <div class="estate-features-row">
+            <span>🛏 5 BHK Duplex</span>
+            <span>📐 6,200 Sq. Ft.</span>
+            <span>💎 Private Pool</span>
+          </div>
+          <button class="btn-book-site-visit" onclick="event.stopPropagation(); openChauffeurModal('The Kohinoor Sky Duplex Hyderabad');">
+            Request Private Walkthrough →
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="estate-card" data-city="goa" onclick="openDossier('Casa de Sol Heritage Villa', 'Assagao, Goa', '₹6.80 Cr', '4 BHK Villa', '4,200 Sq. Ft.', 'GOARERA: 0924/11', 'images/estate-goa.jpg')">
+        <div class="estate-img-wrap">
+          <img src="images/estate-goa.jpg" alt="Casa de Sol Portuguese Villa Goa">
+          <div class="badge-rera">GOARERA: 0924/11</div>
+          <div class="badge-status">Possession Dec 2025</div>
+        </div>
+        <div class="estate-body">
+          <div class="estate-price-row">
+            <div class="estate-price">₹6.80 Cr <span style="font-size: 13px; font-weight: 500; color: #777;">onwards</span></div>
+            <div class="estate-emi-tag">EMI: ~₹5.3L/mo</div>
+          </div>
+          <h3 class="estate-title">Casa de Sol Heritage Villa</h3>
+          <p class="estate-location">Assagao Valley, North Goa</p>
+          <div class="estate-features-row">
+            <span>🛏 4 BHK Villa</span>
+            <span>📐 4,200 Sq. Ft.</span>
+            <span>🌴 Private Orchard</span>
+          </div>
+          <button class="btn-book-site-visit" onclick="event.stopPropagation(); openChauffeurModal('Casa de Sol Heritage Villa Goa');">
+            Request Private Walkthrough →
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="estate-card" data-city="mumbai" onclick="openDossier('The Imperial Horizon Penthouse', 'Bandra West, Mumbai', '₹18.50 Cr', '5 BHK Penthouse', '7,400 Sq. Ft.', 'MahaRERA: P51800038910', 'images/estate-penthouse.jpg')">
+        <div class="estate-img-wrap">
+          <img src="images/estate-penthouse.jpg" alt="The Imperial Horizon Penthouse Bandra">
+          <div class="badge-rera">MahaRERA: P51800038910</div>
+          <div class="badge-status">Ready to Move In</div>
+        </div>
+        <div class="estate-body">
+          <div class="estate-price-row">
+            <div class="estate-price">₹18.50 Cr <span style="font-size: 13px; font-weight: 500; color: #777;">onwards</span></div>
+            <div class="estate-emi-tag">EMI: ~₹14.4L/mo</div>
+          </div>
+          <h3 class="estate-title">The Imperial Horizon Penthouse</h3>
+          <p class="estate-location">Pali Hill, Bandra West, Mumbai</p>
+          <div class="estate-features-row">
+            <span>🛏 5 BHK Penthouse</span>
+            <span>📐 7,400 Sq. Ft.</span>
+            <span>🌊 360° Arabian Sea</span>
+          </div>
+          <button class="btn-book-site-visit" onclick="event.stopPropagation(); openChauffeurModal('The Imperial Horizon Penthouse Bandra');">
+            Request Private Walkthrough →
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none;">
+        <div>© 2026 Aangan Luxury Estates Pvt. Ltd. All rights reserved. RERA Certified Agency.</div>
+        <div>MahaRERA: A51900018924 • HRERA: 44/2023</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple Dossier Modal -->
+  <div class="modal-backdrop-luxury" id="dossierModal" onclick="if(event.target===this) this.classList.remove('active')">
+    <div class="modal-luxury-card" style="max-width: 600px;">
+      <button class="modal-close-gold" onclick="document.getElementById('dossierModal').classList.remove('active')">✕</button>
+      <div style="padding: 32px;">
+        <span style="font-size: 11px; font-weight: 700; color: var(--accent-gold-dark); text-transform: uppercase;" id="dosRera">RERA CERTIFIED</span>
+        <h3 style="font-family: var(--font-serif); font-size: 28px; color: var(--bg-emerald); margin: 6px 0;" id="dosTitle">Property</h3>
+        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;" id="dosLoc">Location</p>
+        <div style="font-size: 26px; font-weight: 800; color: var(--bg-emerald); margin-bottom: 20px;" id="dosPrice">₹0 Cr</div>
+        <p style="font-size: 14px; color: var(--text-body); line-height: 1.6; margin-bottom: 24px;">
+          Includes clear 30-year legal title search, 100% authentic Vastu Shastra certification, and private showing coordination.
+        </p>
+        <button class="btn-primary-gold" style="width: 100%;" onclick="alert('Dossier requested! Our relationship manager will coordinate via WhatsApp.'); document.getElementById('dossierModal').classList.remove('active');">
+          Schedule Private Maybach Showing →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function filterCity(city, btn) {
+      document.querySelectorAll('.city-tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cards = document.querySelectorAll('#estatesGrid .estate-card');
+      cards.forEach(card => {
+        if (city === 'all' || card.getAttribute('data-city') === city) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function openDossier(title, loc, price, config, sqft, rera, img) {
+      document.getElementById('dosTitle').textContent = title;
+      document.getElementById('dosLoc').textContent = loc + ' • ' + config + ' (' + sqft + ')';
+      document.getElementById('dosPrice').textContent = price;
+      document.getElementById('dosRera').textContent = rera;
+      document.getElementById('dossierModal').classList.add('active');
+    }
+
+    function openChauffeurModal(name) {
+      openDossier(name || 'Curated Sky Mansion', 'Prime Metro Location', '₹5 Cr - ₹25 Cr', '3-5 BHK', '4,000+ Sq. Ft.', 'RERA Verified');
+    }
+  </script>
+</body>
+</html>

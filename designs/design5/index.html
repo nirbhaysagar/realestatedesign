@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrihaDirect — India's #1 Zero Brokerage PropTech Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== TOP TRUST BAR ==================== -->
+  <div class="top-trust-bar">
+    <div class="container">
+      <div class="trust-bar-content">
+        <div class="trust-badge-pill">
+          <span>🛡️</span>
+          <span>100% Verified Developer Inventory • <span class="green">0% Brokerage Guaranteed</span></span>
+        </div>
+        <div class="trust-badge-pill">
+          <span>🏛️</span>
+          <span>RERA Approved Projects with Clear Title Certificate</span>
+        </div>
+        <div class="trust-badge-pill">
+          <span>⚡</span>
+          <span>Pre-Approved Home Loans: SBI (8.40%) • HDFC (8.50%) • ICICI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SITE HEADER ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        
+        <div class="brand-wrap">
+          <div class="brand-logo-text">Griha<span>Direct</span></div>
+        </div>
+
+        <ul class="main-nav">
+          <li><a href="index.html" style="color: var(--accent-saffron); font-weight: 700;">Home</a></li>
+          <li><a href="projects.html">Verified Projects</a></li>
+          <li><a href="compare.html">0% Brokerage</a></li>
+          <li><a href="cost-calc.html">On-Road Cost</a></li>
+          <li><a href="contact.html">Post Property</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <a href="contact.html" class="btn-post-property">Post Free Property</a>
+          <button class="btn-whatsapp-chat" onclick="openWhatsAppModal()">
+            <span>💬 WhatsApp</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SEARCH ENGINE ==================== -->
+  <section class="hero-section">
+    <div class="container">
+      
+      <div class="hero-content">
+        <div class="zero-brokerage-badge">
+          <span>★ 0% Brokerage • Save Up To ₹2.5 Lakhs On Agency Fees</span>
+        </div>
+        <h1 class="hero-title">
+          Direct-From-Builder Homes.<br><span>Zero Brokerage. Verified RERA.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Explore over 18,000+ handpicked apartments, duplexes, and villas across India's top 6 metropolitan tech hubs.
+        </p>
+      </div>
+
+      <!-- PropTech Search Widget -->
+      <div class="search-widget-container">
+        
+        <div class="search-tabs-row">
+          <div class="search-tab-pill active" onclick="switchSearchTab(this)">Buy New Homes</div>
+          <div class="search-tab-pill" onclick="switchSearchTab(this)">Ready to Move In</div>
+          <div class="search-tab-pill" onclick="switchSearchTab(this)">Under Construction</div>
+          <div class="search-tab-pill" onclick="switchSearchTab(this)">Plots & Land</div>
+        </div>
+
+        <div class="search-form-grid">
+          
+          <!-- City & Locality -->
+          <div class="search-cell">
+            <label>City / Locality</label>
+            <div class="search-select-box">
+              <span>📍</span>
+              <select id="searchCity">
+                <option value="blr">Bengaluru (Whitefield • Sarjapur • Hebbal)</option>
+                <option value="mum">Mumbai (Andheri • Thane • Powai)</option>
+                <option value="ggn">Gurugram (Golf Course Ext. • Dwarka Exp)</option>
+                <option value="hyd">Hyderabad (Gachibowli • Kokapet)</option>
+                <option value="pune">Pune (Kharadi • Baner • Wakad)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- BHK Type -->
+          <div class="search-cell">
+            <label>Configuration</label>
+            <div class="search-select-box">
+              <span>🏠</span>
+              <select id="searchBHK">
+                <option value="all">All Configurations</option>
+                <option value="2bhk">2 BHK (Most Popular)</option>
+                <option value="3bhk">3 BHK Premium</option>
+                <option value="4bhk">4 BHK Luxury Sky Villa</option>
+                <option value="1bhk">1 BHK Smart Compact</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Budget Range -->
+          <div class="search-cell">
+            <label>Budget (₹)</label>
+            <div class="search-select-box">
+              <span>💰</span>
+              <select id="searchBudget">
+                <option value="any">Any Budget</option>
+                <option value="50-100">₹50L - ₹1.00 Cr</option>
+                <option value="100-200">₹1.00 Cr - ₹2.50 Cr</option>
+                <option value="200plus">₹2.50 Cr+</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button class="btn-search-main" onclick="executeSearch()">
+            <span>Search</span>
+            <span>🔍</span>
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- BHK Quick Pills -->
+      <div class="bhk-filters-bar">
+        <div class="bhk-pill active" onclick="filterBhk(this, 'all')">All Homes</div>
+        <div class="bhk-pill" onclick="filterBhk(this, '2bhk')">2 BHK (From ₹75 Lakhs)</div>
+        <div class="bhk-pill" onclick="filterBhk(this, '3bhk')">3 BHK (From ₹1.35 Cr)</div>
+        <div class="bhk-pill" onclick="filterBhk(this, 'ready')">Ready to Move In</div>
+        <div class="bhk-pill" onclick="filterBhk(this, 'villa')">Luxury Villas</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== VERIFIED DEVELOPER PROJECTS (6 CARDS) ==================== -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      
+      <div class="section-head-row">
+        <div>
+          <h2 class="section-title">Trending Verified Projects</h2>
+          <p class="section-sub">Direct builder pricing with instant bank loan pre-approvals and zero brokerage</p>
+        </div>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        
+        <!-- Project 1: Godrej -->
+        <div class="prop-card" data-bhk="2,3">
+          <div class="prop-thumb-box">
+            <img src="images/proj-godrej.jpg" alt="Godrej Athena">
+            <div class="badge-builder">GODREJ PROPERTIES</div>
+            <div class="badge-zero-brokerage">0% BROKERAGE</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-price-line">
+              <div class="prop-price">₹1.45 Cr <span style="font-size: 13px; font-weight: 500; color: #64748b;">onwards</span></div>
+            </div>
+            <h3 class="prop-title">Godrej Athena</h3>
+            <p class="prop-locality">Indiranagar / HAL, Bengaluru</p>
+            <div class="prop-specs-tags">
+              <span class="spec-chip">2 & 3 BHK</span>
+              <span class="spec-chip">1,420 Sq. Ft.</span>
+              <span class="spec-chip">Dec 2026</span>
+            </div>
+            <div class="prop-card-btns">
+              <button class="btn-schedule-visit" onclick="openCabModal('Godrej Athena, Bengaluru')">Book Free Cab Visit</button>
+              <button class="btn-whatsapp-icon" title="Chat on WhatsApp" onclick="openWhatsAppModal('Godrej Athena')">💬</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: DLF -->
+        <div class="prop-card" data-bhk="3,4">
+          <div class="prop-thumb-box">
+            <img src="images/proj-dlf.jpg" alt="DLF The Arbour">
+            <div class="badge-builder">DLF HOMES</div>
+            <div class="badge-zero-brokerage">0% BROKERAGE</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-price-line">
+              <div class="prop-price">₹2.85 Cr <span style="font-size: 13px; font-weight: 500; color: #64748b;">onwards</span></div>
+            </div>
+            <h3 class="prop-title">DLF The Arbour</h3>
+            <p class="prop-locality">Sector 63, Golf Course Ext., Gurugram</p>
+            <div class="prop-specs-tags">
+              <span class="spec-chip">3 & 4 BHK</span>
+              <span class="spec-chip">2,600 Sq. Ft.</span>
+              <span class="spec-chip">RERA Verified</span>
+            </div>
+            <div class="prop-card-btns">
+              <button class="btn-schedule-visit" onclick="openCabModal('DLF The Arbour, Gurugram')">Book Free Cab Visit</button>
+              <button class="btn-whatsapp-icon" title="Chat on WhatsApp" onclick="openWhatsAppModal('DLF The Arbour')">💬</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Prestige -->
+        <div class="prop-card" data-bhk="1,2,3">
+          <div class="prop-thumb-box">
+            <img src="images/proj-prestige.jpg" alt="Prestige City">
+            <div class="badge-builder">PRESTIGE GROUP</div>
+            <div class="badge-zero-brokerage">0% BROKERAGE</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-price-line">
+              <div class="prop-price">₹95 Lakhs <span style="font-size: 13px; font-weight: 500; color: #64748b;">onwards</span></div>
+            </div>
+            <h3 class="prop-title">The Prestige City</h3>
+            <p class="prop-locality">Sarjapur Road, Bengaluru</p>
+            <div class="prop-specs-tags">
+              <span class="spec-chip">1, 2 & 3 BHK</span>
+              <span class="spec-chip">1,150 Sq. Ft.</span>
+              <span class="spec-chip">Ready Q3 2026</span>
+            </div>
+            <div class="prop-card-btns">
+              <button class="btn-schedule-visit" onclick="openCabModal('The Prestige City, Bengaluru')">Book Free Cab Visit</button>
+              <button class="btn-whatsapp-icon" title="Chat on WhatsApp" onclick="openWhatsAppModal('Prestige City')">💬</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Lodha -->
+        <div class="prop-card" data-bhk="2,3">
+          <div class="prop-thumb-box">
+            <img src="images/proj-lodha.jpg" alt="Lodha Park">
+            <div class="badge-builder">LODHA (MACROTECH)</div>
+            <div class="badge-zero-brokerage">0% BROKERAGE</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-price-line">
+              <div class="prop-price">₹2.10 Cr <span style="font-size: 13px; font-weight: 500; color: #64748b;">onwards</span></div>
+            </div>
+            <h3 class="prop-title">Lodha World View</h3>
+            <p class="prop-locality">Lower Parel / Worli, Mumbai</p>
+            <div class="prop-specs-tags">
+              <span class="spec-chip">2 & 3 BHK</span>
+              <span class="spec-chip">1,850 Sq. Ft.</span>
+              <span class="spec-chip">Ready to Move</span>
+            </div>
+            <div class="prop-card-btns">
+              <button class="btn-schedule-visit" onclick="openCabModal('Lodha World View, Mumbai')">Book Free Cab Visit</button>
+              <button class="btn-whatsapp-icon" title="Chat on WhatsApp" onclick="openWhatsAppModal('Lodha World View')">💬</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Sobha -->
+        <div class="prop-card" data-bhk="3,4">
+          <div class="prop-thumb-box">
+            <img src="images/proj-sobha.jpg" alt="Sobha Neopolis">
+            <div class="badge-builder">SOBHA LIMITED</div>
+            <div class="badge-zero-brokerage">0% BROKERAGE</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-price-line">
+              <div class="prop-price">₹1.65 Cr <span style="font-size: 13px; font-weight: 500; color: #64748b;">onwards</span></div>
+            </div>
+            <h3 class="prop-title">Sobha Neopolis</h3>
+            <p class="prop-locality">Panathur / Marathahalli, Bengaluru</p>
+            <div class="prop-specs-tags">
+              <span class="spec-chip">3 & 4 BHK</span>
+              <span class="spec-chip">1,980 Sq. Ft.</span>
+              <span class="spec-chip">Under Construction</span>
+            </div>
+            <div class="prop-card-btns">
+              <button class="btn-schedule-visit" onclick="openCabModal('Sobha Neopolis, Bengaluru')">Book Free Cab Visit</button>
+              <button class="btn-whatsapp-icon" title="Chat on WhatsApp" onclick="openWhatsAppModal('Sobha Neopolis')">💬</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Shapoorji Pallonji -->
+        <div class="prop-card" data-bhk="1,2">
+          <div class="prop-thumb-box">
+            <img src="images/proj-shapoorji.jpg" alt="Shapoorji Pallonji Joyville">
+            <div class="badge-builder">SHAPOORJI PALLONJI</div>
+            <div class="badge-zero-brokerage">0% BROKERAGE</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-price-line">
+              <div class="prop-price">₹68 Lakhs <span style="font-size: 13px; font-weight: 500; color: #64748b;">onwards</span></div>
+            </div>
+            <h3 class="prop-title">Joyville Hadapsar / Hinjewadi</h3>
+            <p class="prop-locality">Hinjewadi IT Phase 1, Pune</p>
+            <div class="prop-specs-tags">
+              <span class="spec-chip">1 & 2 BHK</span>
+              <span class="spec-chip">720 Sq. Ft.</span>
+              <span class="spec-chip">Ready Q4 2025</span>
+            </div>
+            <div class="prop-card-btns">
+              <button class="btn-schedule-visit" onclick="openCabModal('Joyville, Pune')">Book Free Cab Visit</button>
+              <button class="btn-whatsapp-icon" title="Chat on WhatsApp" onclick="openWhatsAppModal('Joyville')">💬</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== COMPARISON SECTION ==================== -->
+  <section class="comparison-section" id="comparison">
+    <div class="container">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+        <h2 class="section-title">The GrihaDirect Advantage</h2>
+        <p class="section-sub">Why over 24,000+ Indian homebuyers chose us over traditional property brokers</p>
+      </div>
+
+      <div class="comparison-grid">
+        <div class="comp-card highlight">
+          <div class="comp-title" style="color: var(--accent-green);">
+            <span>✓ GrihaDirect PropTech</span>
+          </div>
+          <div class="comp-features-list">
+            <div class="comp-item">
+              <span>✅</span>
+              <div><strong>0% Brokerage Fee:</strong> Keep 100% of your savings (Average ₹1.5L - ₹3.5L saved per transaction).</div>
+            </div>
+            <div class="comp-item">
+              <span>✅</span>
+              <div><strong>Direct Builder Pricing:</strong> No hidden markups or inflated quotes. Complete price transparency.</div>
+            </div>
+            <div class="comp-item">
+              <span>✅</span>
+              <div><strong>100% RERA & OC Certified:</strong> Every project is audited by legal advocates before listing.</div>
+            </div>
+            <div class="comp-item">
+              <span>✅</span>
+              <div><strong>Complimentary AC Cab for Site Visits:</strong> Free home pickup and drop for all scheduled project visits.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-card traditional">
+          <div class="comp-title" style="color: #64748b;">
+            <span>✕ Traditional Brokers</span>
+          </div>
+          <div class="comp-features-list">
+            <div class="comp-item">
+              <span>❌</span>
+              <div><strong>2% Commission:</strong> Pay ₹2,00,000+ out of pocket on a ₹1 Crore home.</div>
+            </div>
+            <div class="comp-item">
+              <span>❌</span>
+              <div><strong>Biased Recommendations:</strong> Pushing whichever builder pays the broker the highest kickback.</div>
+            </div>
+            <div class="comp-item">
+              <span>❌</span>
+              <div><strong>Unverified Projects:</strong> High risk of delayed projects or disputed land titles.</div>
+            </div>
+            <div class="comp-item">
+              <span>❌</span>
+              <div><strong>Zero Follow-up Support:</strong> Disappears once the agreement is signed.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ON-ROAD PROPERTY COST CALCULATOR ==================== -->
+  <section class="cost-calculator-section" id="cost-calc">
+    <div class="container">
+      <div class="cost-calc-card">
+        <div class="cost-grid">
+          <div>
+            <span style="font-size: 12px; font-weight: 800; color: var(--accent-saffron); text-transform: uppercase; letter-spacing: 0.08em;">TRANSPARENT PRICING</span>
+            <h2 class="section-title" style="margin: 8px 0 14px;">All-Inclusive On-Road Cost Calculator</h2>
+            <p style="color: var(--text-body); font-size: 15px; line-height: 1.6; margin-bottom: 24px;">
+              Avoid surprise hidden fees. Calculate your exact on-road price including State Stamp Duty, Registration, GST, and Maintenance deposits.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <div>
+                <label style="font-size: 12px; font-weight: 700; color: var(--text-dark);">Select State</label>
+                <div class="search-select-box" style="margin-top: 6px;">
+                  <select id="calcState" onchange="calcOnRoad()">
+                    <option value="5.0">Maharashtra (5% Stamp Duty)</option>
+                    <option value="5.5" selected>Karnataka (5.5% Stamp Duty)</option>
+                    <option value="7.0">Haryana / NCR (7% Stamp Duty)</option>
+                    <option value="7.5">Telangana (7.5% Stamp Duty)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label style="font-size: 12px; font-weight: 700; color: var(--text-dark);">Agreement Base Value (₹ Lakhs)</label>
+                <div class="search-select-box" style="margin-top: 6px;">
+                  <input type="number" id="calcBaseVal" value="100" min="20" max="1000" step="5" style="border: none; background: transparent; width: 100%; font-size: 15px; font-weight: 700;" oninput="calcOnRoad()">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cost-result-table">
+            <h4 style="font-size: 16px; font-weight: 800; color: var(--primary-navy); margin-bottom: 12px;">Estimated On-Road Breakdown</h4>
+            <div class="cost-row">
+              <span>Base Property Value:</span>
+              <strong id="outBase">₹ 1,00,00,000</strong>
+            </div>
+            <div class="cost-row">
+              <span>Stamp Duty:</span>
+              <strong id="outStamp">₹ 5,50,000</strong>
+            </div>
+            <div class="cost-row">
+              <span>Registration Fee (Govt Cap):</span>
+              <strong id="outReg">₹ 30,000</strong>
+            </div>
+            <div class="cost-row">
+              <span>GST (5% Under-Construction):</span>
+              <strong id="outGst">₹ 5,00,000</strong>
+            </div>
+            <div class="cost-row">
+              <span>GrihaDirect Brokerage:</span>
+              <strong style="color: var(--accent-green);">₹ 0 (FREE)</strong>
+            </div>
+            <div class="cost-row total">
+              <span>Total On-Road Cost:</span>
+              <span id="outTotal" style="color: var(--accent-saffron);">₹ 1,10,80,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BANK PARTNERS ==================== -->
+  <section class="banks-section" id="banks">
+    <div class="container">
+      <h3 style="font-size: 18px; font-weight: 800; color: var(--primary-navy);">Instant Pre-Approved Home Loan Partners</h3>
+      <div class="banks-grid">
+        <div class="bank-item">🏛️ SBI Home Loans • 8.40%</div>
+        <div class="bank-item">🏦 HDFC Bank • 8.50%</div>
+        <div class="bank-item">💎 ICICI Bank • 8.55%</div>
+        <div class="bank-item">⚡ Axis Bank • 8.60%</div>
+        <div class="bank-item">🛡️ Bank of Baroda • 8.45%</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== REVIEWS ==================== -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <h2 class="section-title">Homebuyer Stories</h2>
+        <p class="section-sub">Trusted by tech professionals and young families across Bengaluru, Mumbai & Gurugram</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "Saved ₹2.4 Lakhs in brokerage on our 3 BHK in Godrej Athena! The GrihaDirect team arranged a free cab for site visits and helped negotiate an extra parking slot."
+          </p>
+          <div class="reviewer-meta">
+            <img src="images/avatar-buyer1.jpg" alt="Rohan Verma" class="reviewer-avatar">
+            <div>
+              <div style="font-size: 14px; font-weight: 700;">Rohan Verma</div>
+              <div style="font-size: 12px; color: var(--text-muted);">Senior Tech Lead, Google (Bengaluru)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "The on-road cost calculator was 100% spot on down to the last rupee for stamp duty and registration. Super smooth experience with zero annoying cold calls."
+          </p>
+          <div class="reviewer-meta">
+            <img src="images/avatar-buyer2.jpg" alt="Priya Kulkarni" class="reviewer-avatar">
+            <div>
+              <div style="font-size: 14px; font-weight: 700;">Priya Kulkarni</div>
+              <div style="font-size: 12px; color: var(--text-muted);">Product Manager, FinTech (Mumbai)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "We booked a 3 BHK in DLF The Arbour on Golf Course Ext. Road through GrihaDirect. Got our SBI home loan approved in just 48 hours. Highly recommended!"
+          </p>
+          <div class="reviewer-meta">
+            <img src="images/avatar-buyer1.jpg" alt="Amitabh & Neha Sen" class="reviewer-avatar">
+            <div>
+              <div style="font-size: 14px; font-weight: 700;">Amitabh & Neha Sen</div>
+              <div style="font-size: 12px; color: var(--text-muted);">First-time Homebuyers (Gurugram)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo-text" style="color: #ffffff; margin-bottom: 12px;">Griha<span>Direct</span></div>
+          <p style="color: #94a3b8; font-size: 13.5px; line-height: 1.6; max-width: 300px;">
+            India's most trusted direct-developer proptech platform. 100% verified listings with zero brokerage.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore Portal</h4>
+          <ul>
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="projects.html">Verified Projects (6)</a></li>
+            <li><a href="compare.html">0% Brokerage Savings</a></li>
+            <li><a href="cost-calc.html">On-Road Cost Calculator</a></li>
+            <li><a href="contact.html">Post Property & Offices</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Popular Metros</h4>
+          <ul>
+            <li><a href="projects.html">Bengaluru Whitefield & Sarjapur</a></li>
+            <li><a href="projects.html">Mumbai BKC & Western Suburbs</a></li>
+            <li><a href="projects.html">Gurugram Golf Course Extn</a></li>
+            <li><a href="projects.html">Hyderabad HITEC & Kokapet</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Developer Desk</h4>
+          <ul>
+            <li><span style="color: #fff; font-weight: 700;">+91 80 4920 8800</span></li>
+            <li><span style="color: #94a3b8;">support@grihadirect.in</span></li>
+            <li><span style="color: #94a3b8;">Koramangala, Bengaluru, Karnataka</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 GrihaDirect Technologies India Pvt. Ltd. All rights reserved.</div>
+        <div>MahaRERA: A51800039281 • RERA Karnataka: PRM/KA/RERA/0042</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Assistant Modal -->
+  <div class="griha-modal" id="whatsappModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(14,35,56,0.7); z-index:9999; justify-content:center; align-items:center;">
+    <div style="background:#fff; border-radius:16px; padding:32px; max-width:440px; width:90%; position:relative; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+      <button onclick="closeWhatsAppModal()" style="position:absolute; top:16px; right:16px; font-size:22px; cursor:pointer; background:none; border:none; color:#888;">&times;</button>
+      <div style="display:inline-block; background:#25D366; color:#fff; font-size:11px; font-weight:800; padding:4px 10px; border-radius:12px; margin-bottom:12px;">WHATSAPP 24/7 DESK</div>
+      <h3 style="font-size:22px; color:var(--primary-navy); margin-bottom:8px;">Chat with GrihaDirect Assistant</h3>
+      <p style="font-size:13.5px; color:#64748b; margin-bottom:20px;">Receive verified PDF brochures, price sheets, and direct builder offers straight to your WhatsApp without spam.</p>
+      
+      <form onsubmit="handleWhatsAppSubmit(event)">
+        <div style="margin-bottom:12px;">
+          <label style="display:block; font-size:12px; font-weight:700; color:#475569; margin-bottom:4px;">YOUR NAME</label>
+          <input type="text" id="waName" required placeholder="e.g. Rahul Sharma" style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:8px; font-size:14px;">
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="display:block; font-size:12px; font-weight:700; color:#475569; margin-bottom:4px;">WHATSAPP NUMBER</label>
+          <input type="tel" id="waPhone" required placeholder="+91 98765 XXXXX" style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:8px; font-size:14px;">
+        </div>
+        <button type="submit" style="width:100%; background:#25D366; color:#fff; font-weight:700; padding:12px; border-radius:8px; font-size:15px; display:flex; justify-content:center; align-items:center; gap:8px;">
+          <span>💬 Start WhatsApp Chat</span>
+        </button>
+      </form>
+      <div id="waSuccess" style="display:none; margin-top:12px; padding:10px; background:#dcfce7; color:#15803d; border-radius:8px; font-size:13px; text-align:center;">
+        ✓ Opening direct WhatsApp thread with GrihaDirect assistant...
+      </div>
+    </div>
+  </div>
+
+  <!-- Cab Visit Modal -->
+  <div class="griha-modal" id="cabModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(14,35,56,0.7); z-index:9999; justify-content:center; align-items:center;">
+    <div style="background:#fff; border-radius:16px; padding:32px; max-width:440px; width:90%; position:relative; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+      <button onclick="closeCabModal()" style="position:absolute; top:16px; right:16px; font-size:22px; cursor:pointer; background:none; border:none; color:#888;">&times;</button>
+      <div style="display:inline-block; background:#ffedd5; color:#ea580c; font-size:11px; font-weight:800; padding:4px 10px; border-radius:12px; margin-bottom:12px;">COMPLIMENTARY CAB</div>
+      <h3 style="font-size:22px; color:var(--primary-navy); margin-bottom:8px;">Book Free Site Visit</h3>
+      <p style="font-size:13px; color:#64748b; margin-bottom:16px;" id="cabTargetProject">We'll schedule an AC Uber/Ola cab from your home to the developer sales pavilion at zero cost.</p>
+      
+      <form onsubmit="handleCabSubmit(event)">
+        <div style="margin-bottom:12px;">
+          <label style="display:block; font-size:12px; font-weight:700; color:#475569; margin-bottom:4px;">YOUR NAME</label>
+          <input type="text" required placeholder="e.g. Ananya Iyer" style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:8px; font-size:14px;">
+        </div>
+        <div style="margin-bottom:12px;">
+          <label style="display:block; font-size:12px; font-weight:700; color:#475569; margin-bottom:4px;">PICKUP LOCATION</label>
+          <input type="text" required placeholder="e.g. HSR Layout, Sector 2" style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:8px; font-size:14px;">
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="display:block; font-size:12px; font-weight:700; color:#475569; margin-bottom:4px;">MOBILE NUMBER</label>
+          <input type="tel" required placeholder="+91 98765 XXXXX" style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:8px; font-size:14px;">
+        </div>
+        <button type="submit" style="width:100%; background:var(--accent-saffron); color:#fff; font-weight:700; padding:12px; border-radius:8px; font-size:15px;">
+          Confirm Free Cab Pickup
+        </button>
+      </form>
+      <div id="cabSuccess" style="display:none; margin-top:12px; padding:10px; background:#dcfce7; color:#15803d; border-radius:8px; font-size:13px; text-align:center;">
+        ✓ Booking confirmed! Ride details will be sent 2 hours before your visit.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchSearchTab(tab) {
+      document.querySelectorAll('.search-tab-pill').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    }
+
+    function filterBhk(pill, type) {
+      document.querySelectorAll('.bhk-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      
+      const cards = document.querySelectorAll('#projectsGrid .prop-card');
+      cards.forEach(c => {
+        const bhk = c.getAttribute('data-bhk') || '';
+        if (type === 'all') {
+          c.style.display = 'block';
+        } else if (type === '2bhk' && bhk.includes('2')) {
+          c.style.display = 'block';
+        } else if (type === '3bhk' && bhk.includes('3')) {
+          c.style.display = 'block';
+        } else if (type === 'villa' && bhk.includes('4')) {
+          c.style.display = 'block';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+    }
+
+    function executeSearch() {
+      const city = document.getElementById('searchCity').value;
+      const bhk = document.getElementById('searchBHK').value;
+      const budget = document.getElementById('searchBudget').value;
+      const sec = document.getElementById('projects');
+      if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function calcOnRoad() {
+      const stateRate = parseFloat(document.getElementById('calcState').value);
+      const baseLakhs = parseFloat(document.getElementById('calcBaseVal').value) || 100;
+
+      const baseVal = baseLakhs * 100000;
+      const stampDuty = baseVal * (stateRate / 100);
+      const regFee = Math.min(30000, baseVal * 0.01);
+      const gst = baseVal * 0.05;
+      const total = baseVal + stampDuty + regFee + gst;
+
+      document.getElementById('outBase').textContent = '₹ ' + Math.round(baseVal).toLocaleString('en-IN');
+      document.getElementById('outStamp').textContent = '₹ ' + Math.round(stampDuty).toLocaleString('en-IN');
+      document.getElementById('outReg').textContent = '₹ ' + Math.round(regFee).toLocaleString('en-IN');
+      document.getElementById('outGst').textContent = '₹ ' + Math.round(gst).toLocaleString('en-IN');
+      document.getElementById('outTotal').textContent = '₹ ' + Math.round(total).toLocaleString('en-IN');
+    }
+
+    function openWhatsAppModal(projectName) {
+      const modal = document.getElementById('whatsappModal');
+      modal.style.display = 'flex';
+    }
+    function closeWhatsAppModal() {
+      document.getElementById('whatsappModal').style.display = 'none';
+    }
+    function handleWhatsAppSubmit(e) {
+      e.preventDefault();
+      document.getElementById('waSuccess').style.display = 'block';
+      setTimeout(() => {
+        closeWhatsAppModal();
+        document.getElementById('waSuccess').style.display = 'none';
+      }, 2000);
+    }
+
+    function openCabModal(projectName) {
+      const modal = document.getElementById('cabModal');
+      if (projectName) {
+        document.getElementById('cabTargetProject').textContent = `Complimentary ride to ${projectName} sales gallery.`;
+      }
+      modal.style.display = 'flex';
+    }
+    function closeCabModal() {
+      document.getElementById('cabModal').style.display = 'none';
+    }
+    function handleCabSubmit(e) {
+      e.preventDefault();
+      document.getElementById('cabSuccess').style.display = 'block';
+      setTimeout(() => {
+        closeCabModal();
+        document.getElementById('cabSuccess').style.display = 'none';
+      }, 2500);
+    }
+
+    // Init
+    calcOnRoad();
+  </script>
+</body>
+</html>

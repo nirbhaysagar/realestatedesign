@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Imperial Club & Amenities — Aangan Luxury Estates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .amenities-banner {
+      background: var(--bg-emerald);
+      color: #ffffff;
+      padding: 90px 0 60px;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    .amenity-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-bottom: 70px;
+    }
+    .amenity-card {
+      background: #ffffff;
+      border: 1px solid #e8e2d8;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .amenity-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(13,38,31,0.08);
+      border-color: var(--accent-gold);
+    }
+    .amenity-img {
+      height: 240px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .amenity-content {
+      padding: 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .amenity-badge {
+      display: inline-block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-bottom: 8px;
+    }
+    .amenity-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--bg-emerald);
+      margin-bottom: 12px;
+    }
+    .amenity-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #666;
+      margin-bottom: 16px;
+    }
+    .amenity-perks {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px dashed #e8e2d8;
+      font-size: 13px;
+      color: #444;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .amenity-perk-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .partners-strip {
+      background: #fbf9f4;
+      border: 1px solid #e8e2d8;
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 80px;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .amenity-detail-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top RERA Bar -->
+  <div class="rera-top-bar">
+    <div class="container">
+      <div class="rera-bar-inner">
+        <div class="rera-badge-item">
+          <span>🏛️</span>
+          <span>100% RERA Registered • MahaRERA | HRERA | K-RERA | TS-RERA</span>
+        </div>
+        <div class="rera-badge-item">
+          <span>☸</span>
+          <span>Certified 100% Vastu Compliant Sky Mansions</span>
+        </div>
+        <div class="rera-badge-item">
+          <span>⭐</span>
+          <span>Private Concierge: <span class="hotline">+91 98200 45678</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-wrap">
+          <div class="brand-title">AANGAN</div>
+          <div class="brand-sub">LUXURY ESTATES • आँगन</div>
+        </a>
+        <ul class="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="residences.html">Residences</a></li>
+          <li><a href="amenities.html" style="color: var(--accent-gold); font-weight: 800;">Club & Amenities</a></li>
+          <li><a href="nri-desk.html">NRI Gateway</a></li>
+          <li><a href="contact.html">Concierge Desk</a></li>
+        </ul>
+        <button class="btn-vip-pickup" onclick="openChauffeurModal()">
+          <span>🚗 Book Site Visit</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="amenities-banner">
+    <div class="container">
+      <span class="vastu-pill">THE 7-STAR RESIDENTS' PRIVILEGE</span>
+      <h1 class="hero-heading" style="font-size: 52px; margin: 12px 0 16px;">The Imperial Club Collection</h1>
+      <p style="color: rgba(255,255,255,0.8); font-size: 17px; max-width: 650px;">
+        Designed exclusively for high-net-worth families. Experience resort-tier wellness, private aviation access, Michelin-curated banquet salons, and bank-grade security.
+      </p>
+    </div>
+  </section>
+
+  <!-- Amenities Grid -->
+  <section class="container">
+    <div class="amenity-detail-grid">
+
+      <!-- 1 -->
+      <div class="amenity-card">
+        <img src="images/amenity-pool.jpg" class="amenity-img" alt="Skyline Horizon Pool">
+        <div class="amenity-content">
+          <span class="amenity-badge">Aqua & Sky Wellness</span>
+          <h3 class="amenity-title">The Skyline Horizon Pool</h3>
+          <p class="amenity-desc">
+            50-meter temperature-regulated infinity pool floating above the city canopy. Features ozone water purification, underwater acoustic speakers, submerged daybeds, and private sunset cabana beverage service.
+          </p>
+          <div class="amenity-perks">
+            <span class="amenity-perk-item">✓ Ozone Treated</span>
+            <span class="amenity-perk-item">✓ 28°C Year-Round Heating</span>
+            <span class="amenity-perk-item">✓ Butler Service</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="amenity-card">
+        <img src="images/amenity-spa.jpg" class="amenity-img" alt="Ayurvedic Wellness Spa">
+        <div class="amenity-content">
+          <span class="amenity-badge">Holistic Rejuvenation</span>
+          <h3 class="amenity-title">Ayurvedic & Cryo Spa Pavilion</h3>
+          <p class="amenity-desc">
+            Authentic Kerala Panchakarma therapies curated by certified Vaidyas. Complemented by German cryotherapy chambers (-110°C), pink Himalayan salt meditation rooms, and Japanese cold plunge baths.
+          </p>
+          <div class="amenity-perks">
+            <span class="amenity-perk-item">✓ Certified Vaidyas</span>
+            <span class="amenity-perk-item">✓ Cryotherapy -110°C</span>
+            <span class="amenity-perk-item">✓ Himalayan Salt Cave</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="amenity-card">
+        <img src="images/amenity-cigar.jpg" class="amenity-img" alt="Sommelier Cellar & Lounge">
+        <div class="amenity-content">
+          <span class="amenity-badge">Epicurean Privileges</span>
+          <h3 class="amenity-title">Sommelier Cellar & Private Vaults</h3>
+          <p class="amenity-desc">
+            Subterranean climate-controlled cellar with private custom lockers for rare vintages and single-estate teas. Includes an English walnut wood tasting salon and state-of-the-art air purification.
+          </p>
+          <div class="amenity-perks">
+            <span class="amenity-perk-item">✓ Personal Lockboxes</span>
+            <span class="amenity-perk-item">✓ Master Sommelier Evenings</span>
+            <span class="amenity-perk-item">✓ Swiss Filtration</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="amenity-card">
+        <img src="images/amenity-golf.jpg" class="amenity-img" alt="Golf Simulator & Sports Club">
+        <div class="amenity-content">
+          <span class="amenity-badge">Sports & Performance</span>
+          <h3 class="amenity-title">PGA TrackMan Virtual Golf</h3>
+          <p class="amenity-desc">
+            Practice on St Andrews and Pebble Beach through dual 4K high-speed camera swing analysis. Plus glass-backed WSF-standard squash courts and Technogym Artis fitness machines.
+          </p>
+          <div class="amenity-perks">
+            <span class="amenity-perk-item">✓ 4K Simulator</span>
+            <span class="amenity-perk-item">✓ WSF Squash Court</span>
+            <span class="amenity-perk-item">✓ Technogym AI Trainers</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="amenity-card">
+        <img src="images/villa-gurgaon.jpg" class="amenity-img" alt="Helipad and Aviation Gateway">
+        <div class="amenity-content">
+          <span class="amenity-badge">Aviation & Mobility</span>
+          <h3 class="amenity-title">Rooftop Helipad & Supercharger Hub</h3>
+          <p class="amenity-desc">
+            Direct DGCA-approved rooftop helipad connectivity for swift transfers to international airports and weekend estates in Alibaug and Lonavala. Complete with ultra-fast 350kW EV charging bays.
+          </p>
+          <div class="amenity-perks">
+            <span class="amenity-perk-item">✓ DGCA Certified</span>
+            <span class="amenity-perk-item">✓ 350kW EV Superchargers</span>
+            <span class="amenity-perk-item">✓ Chauffeur Rest Lounge</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="amenity-card">
+        <img src="images/hero-luxury.jpg" class="amenity-img" alt="Banquet Salon">
+        <div class="amenity-content">
+          <span class="amenity-badge">Society & Celebrations</span>
+          <h3 class="amenity-title">The Durbar Grand Banquet & Theatre</h3>
+          <p class="amenity-desc">
+            Host high-level celebrations, private product launches, and family sangeets in a pillarless 200-guest ballroom with bespoke acoustic treatment, crystal chandeliers, and a master chef staging galley.
+          </p>
+          <div class="amenity-perks">
+            <span class="amenity-perk-item">✓ 200-Guest Capacity</span>
+            <span class="amenity-perk-item">✓ Dolby Atmos Theatre</span>
+            <span class="amenity-perk-item">✓ Chef Prep Kitchen</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Lifestyle Partners -->
+    <div class="partners-strip">
+      <span class="vastu-pill">EXCLUSIVE HOSPITALITY PARTNERSHIPS</span>
+      <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 32px; color: var(--bg-emerald); margin: 12px 0 10px;">
+        Curated White-Glove Concierge Affiliations
+      </h3>
+      <p style="color: #666; font-size: 15px; max-width: 650px; margin: 0 auto 30px;">
+        Every resident at an Aangan property receives complimentary charter access and priority reservations with our handpicked luxury partners.
+      </p>
+
+      <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; opacity: 0.85;">
+        <div style="font-weight: 700; font-size: 18px; letter-spacing: 2px; color: var(--bg-emerald);">ST. REGIS CONCIERGE</div>
+        <div style="font-weight: 700; font-size: 18px; letter-spacing: 2px; color: var(--bg-emerald);">SOTHEBY'S ART ADVISORY</div>
+        <div style="font-weight: 700; font-size: 18px; letter-spacing: 2px; color: var(--bg-emerald);">TAJ CHEF-AT-HOME</div>
+        <div style="font-weight: 700; font-size: 18px; letter-spacing: 2px; color: var(--bg-emerald);">BLADE HELI CHARTERS</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <span class="vastu-pill" style="border-color: rgba(255,255,255,0.4); color: #fff;">PRIVATE CLUB TOURS</span>
+          <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 40px; color: #fff; margin: 10px 0;">
+            Experience The Imperial Club In Person
+          </h2>
+          <p style="color: rgba(255,255,255,0.85); font-size: 15px;">
+            Schedule an accompanied walkthrough of our operational clubhouses in Worli, Golf Course Extn, or UB City.
+          </p>
+        </div>
+        <div>
+          <button class="btn-primary" onclick="openChauffeurModal()" style="font-size: 16px; padding: 16px 32px;">
+            Book Chauffeur Experience →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-title" style="color: #ffffff; font-size: 26px;">AANGAN</div>
+          <div class="brand-sub" style="color: var(--accent-gold); margin-bottom: 16px;">LUXURY ESTATES • आँगन</div>
+          <p style="font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.6);">
+            India's foremost private real estate advisory for ultra-high-net-worth individuals, royal family offices, and leading diaspora leaders worldwide.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Portfolios</h4>
+          <ul class="footer-links">
+            <li><a href="residences.html">Worli Sea Face Pavilions</a></li>
+            <li><a href="residences.html">Golf Course Road Sky Mansions</a></li>
+            <li><a href="residences.html">UB City Penthouses</a></li>
+            <li><a href="residences.html">Jubilee Hills Estates</a></li>
+            <li><a href="residences.html">Assagao Portuguese Villas</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="residences.html">All Residences</a></li>
+            <li><a href="amenities.html">Club & Amenities</a></li>
+            <li><a href="nri-desk.html">NRI Gateway</a></li>
+            <li><a href="contact.html">Concierge Desk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">RERA & Compliance</h4>
+          <p style="font-size: 12px; line-height: 1.7; color: rgba(255,255,255,0.5);">
+            Aangan operates exclusively with RERA-licensed Tier-1 developers. MahaRERA P51800049281 | HRERA 2024/GGM/891 | K-RERA PRM/KA/RERA/1251.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Aangan Luxury Estates Private Limited. All rights reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="color: rgba(255,255,255,0.6);">Privacy Policy</a>
+          <a href="#" style="color: rgba(255,255,255,0.6);">RERA Disclosures</a>
+          <a href="#" style="color: rgba(255,255,255,0.6);">Terms of Engagement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for Chauffeur Visit -->
+  <div class="chauffeur-modal" id="chauffeurModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
+    <div class="modal-card" style="background:#fff; border-radius:16px; padding:32px; max-width:500px; width:90%; position:relative;">
+      <button onclick="closeChauffeurModal()" style="position:absolute; top:16px; right:16px; background:none; border:none; font-size:22px; cursor:pointer;">&times;</button>
+      <span class="vastu-pill" style="margin-bottom:8px;">VIP SERVICE</span>
+      <h3 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:28px; color:var(--bg-emerald); margin:8px 0 12px;">Book Luxury Site Visit</h3>
+      <p style="font-size:13px; color:#666; margin-bottom:20px;">We arrange seamless private Mercedes-Maybach / BMW pickup from your home, airport, or hotel directly to the property pavilion.</p>
+      <form onsubmit="handleVisitSubmit(event)">
+        <div style="margin-bottom:12px;">
+          <label style="display:block; font-size:12px; font-weight:700; color:#555; margin-bottom:4px;">YOUR NAME</label>
+          <input type="text" required placeholder="e.g. Vikramaditya Singhania" style="width:100%; padding:10px 14px; border:1px solid #ccc; border-radius:6px; font-size:14px;">
+        </div>
+        <div style="margin-bottom:12px;">
+          <label style="display:block; font-size:12px; font-weight:700; color:#555; margin-bottom:4px;">PHONE NUMBER / WHATSAPP</label>
+          <input type="tel" required placeholder="+91 98200 XXXXX" style="width:100%; padding:10px 14px; border:1px solid #ccc; border-radius:6px; font-size:14px;">
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="display:block; font-size:12px; font-weight:700; color:#555; margin-bottom:4px;">PREFERRED RESIDENCE & DATE</label>
+          <select style="width:100%; padding:10px 14px; border:1px solid #ccc; border-radius:6px; font-size:14px;">
+            <option>The Worli Sea View Pavilion, Mumbai</option>
+            <option>The Camellias Sky Estate, Gurugram</option>
+            <option>Sadashivanagar Heritage Penthouse, Bengaluru</option>
+            <option>Jubilee Hills Crown Villa, Hyderabad</option>
+            <option>Assagao Forest Sanctuary, North Goa</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%; padding:12px; font-size:15px;">Confirm Private Visit Request</button>
+      </form>
+      <div id="visitSuccess" style="display:none; margin-top:14px; padding:10px; background:#e8f5e9; color:#2e7d32; border-radius:6px; font-size:13px; text-align:center;">
+        ✓ Your chauffeur liaison will call you within 15 minutes.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openChauffeurModal() {
+      document.getElementById('chauffeurModal').style.display = 'flex';
+    }
+    function closeChauffeurModal() {
+      document.getElementById('chauffeurModal').style.display = 'none';
+    }
+    function handleVisitSubmit(e) {
+      e.preventDefault();
+      document.getElementById('visitSuccess').style.display = 'block';
+      setTimeout(() => {
+        closeChauffeurModal();
+        document.getElementById('visitSuccess').style.display = 'none';
+      }, 2500);
+    }
+  </script>
+</body>
+</html>

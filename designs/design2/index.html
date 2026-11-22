@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spaciaz — Landmark Real Estate & Modern Architecture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== 1. HEADER ==================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand-logo">
+        spaciaz<span class="dot"></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" style="color: #000; font-weight: 800;">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="header-right">
+        <div class="header-phone">
+          Call Us: <span>+(004) 123 - 456 88</span>
+        </div>
+        <a href="#contact" class="btn-get-touch">Get In Touch</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==================== 2. HERO SECTION ==================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-card">
+      
+      <!-- Left: Skyscraper Landmark -->
+      <div class="hero-image-wrap">
+        <img src="images/hero-skyscraper.jpg" alt="Iconic modern glass skyscraper landmark">
+      </div>
+
+      <!-- Right: Hero Typography & Actions -->
+      <div class="hero-content">
+        <h1 class="hero-title">
+          A new<br>standard of<br>excellence
+        </h1>
+        <p class="hero-desc">
+          The largest privately held real estate investors and managers in the world.
+        </p>
+
+        <a href="#services" class="btn-services">
+          <span>View All Services</span>
+          <span class="arrow-circle-lime">↗</span>
+        </a>
+
+        <!-- Stats & Watch teaser -->
+        <div class="hero-bottom-stats">
+          <div class="stat-experience">
+            <div class="stat-circle-lime">40</div>
+            <div class="stat-exp-text">years of experiences</div>
+          </div>
+
+          <div class="watch-teaser-pill" onclick="openVideoModal()">
+            <span class="watch-play-icon">▶</span>
+            <span>Watch</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 3. WE DEVELOPED LANDMARK REAL ESTATE PROJECTS ==================== -->
+  <section class="landmark-section" id="about">
+    <div class="container">
+      <span class="pill-tag">WHO WE ARE</span>
+      <h2 class="section-title-large">
+        We developed landmark<br>real estate projects
+      </h2>
+
+      <div class="bento-grid">
+        
+        <!-- Bento Card 1: Obsidian -->
+        <div class="bento-card dark">
+          <div>
+            <div class="card-num">01.</div>
+            <h3 class="card-title">What we do</h3>
+            <p class="card-desc">
+              We maintain this by ensuring transparency and professional conduct in every aspect of development.
+            </p>
+          </div>
+          <div class="card-action-bar">
+            <span class="card-link-text">Our Solutions</span>
+            <div class="circle-action-btn">↗</div>
+          </div>
+        </div>
+
+        <!-- Bento Card 2: Lime Highlight -->
+        <div class="bento-card lime">
+          <div>
+            <div class="card-num">02.</div>
+            <h3 class="card-title">Our impact</h3>
+            <p class="card-desc">
+              We work with both investors and developers to create landmarks that make a sustainable impact.
+            </p>
+            <img src="images/card-facade.jpg" alt="Architectural facade" class="card-visual-img">
+          </div>
+          <div class="card-action-bar">
+            <span class="card-link-text">See Projects</span>
+            <div class="circle-action-btn">↗</div>
+          </div>
+        </div>
+
+        <!-- Bento Card 3: Deep Architectural -->
+        <div class="bento-card model">
+          <div>
+            <div class="card-num">03.</div>
+            <h3 class="card-title">Core values</h3>
+            <p class="card-desc">
+              To empower businesses with cutting-edge real estate solutions that enhance their digital presence and drive growth.
+            </p>
+            <img src="images/card-model.jpg" alt="Architectural scale model" class="card-visual-img">
+          </div>
+          <div class="card-action-bar">
+            <span class="card-link-text">Discover More</span>
+            <div class="circle-action-btn">↗</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 4. AMENITIES MARQUEE TICKER ==================== -->
+  <section class="amenities-marquee-wrap">
+    <div class="marquee-track">
+      <div class="marquee-item">
+        <img src="images/thumb-1.jpg" alt="Thumb" class="marquee-thumb">
+        <span>Humanitarian community</span>
+      </div>
+      <div class="marquee-item">
+        <img src="images/thumb-2.jpg" alt="Thumb" class="marquee-thumb">
+        <span>Comprehensive amenities</span>
+      </div>
+      <div class="marquee-item">
+        <img src="images/card-facade.jpg" alt="Thumb" class="marquee-thumb">
+        <span>Professional services</span>
+      </div>
+      <div class="marquee-item">
+        <img src="images/project-1.jpg" alt="Thumb" class="marquee-thumb">
+        <span>Sustainable green living</span>
+      </div>
+      <div class="marquee-item">
+        <img src="images/project-2.jpg" alt="Thumb" class="marquee-thumb">
+        <span>Global executive network</span>
+      </div>
+      <!-- Duplicate for infinite smooth scroll -->
+      <div class="marquee-item">
+        <img src="images/thumb-1.jpg" alt="Thumb" class="marquee-thumb">
+        <span>Humanitarian community</span>
+      </div>
+      <div class="marquee-item">
+        <img src="images/thumb-2.jpg" alt="Thumb" class="marquee-thumb">
+        <span>Comprehensive amenities</span>
+      </div>
+      <div class="marquee-item">
+        <img src="images/card-facade.jpg" alt="Thumb" class="marquee-thumb">
+        <span>Professional services</span>
+      </div>
+      <div class="marquee-item">
+        <img src="images/project-1.jpg" alt="Thumb" class="marquee-thumb">
+        <span>Sustainable green living</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 5. DARK SKYLINE STATS & METRICS ==================== -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="metrics-grid">
+        
+        <div class="metric-item">
+          <div class="metric-number">
+            48<span class="accent">+</span>
+          </div>
+          <div class="metric-label">completed global projects</div>
+        </div>
+
+        <div class="metric-item">
+          <div class="metric-number">
+            52<span class="accent">+</span>
+          </div>
+          <div class="metric-label">projects in active development</div>
+        </div>
+
+        <div class="metric-item">
+          <div class="metric-number">
+            2.3<span class="accent">b+</span>
+          </div>
+          <div class="metric-label">total capital projects cost</div>
+        </div>
+
+        <div class="metric-item">
+          <div class="metric-number">
+            18<span class="accent">m+</span>
+          </div>
+          <div class="metric-label">square feet of premium property</div>
+        </div>
+
+      </div>
+    </div>
+    <a href="#projects" class="metric-scroll-btn" title="Scroll down">↓</a>
+  </section>
+
+
+  <!-- ==================== 6. WHAT MAKES US DIFFERENT ==================== -->
+  <section class="difference-section" id="services">
+    <div class="container">
+      <div class="difference-grid">
+        
+        <div>
+          <span class="pill-tag">OUR ADVANTAGE</span>
+          <h2 class="section-title-large" style="margin-bottom: 16px;">
+            What makes us<br>different
+          </h2>
+          <p style="color: var(--text-body); font-size: 16px; max-width: 500px;">
+            We combine high-level institutional capital strategy with bespoke architectural engineering to deliver unmatched asset yields.
+          </p>
+
+          <div class="diff-features-list">
+            <div class="diff-card">
+              <span class="diff-dot"></span>
+              <span>Corporate Responsibility</span>
+            </div>
+            <div class="diff-card">
+              <span class="diff-dot"></span>
+              <span>Explore with field experts</span>
+            </div>
+            <div class="diff-card">
+              <span class="diff-dot"></span>
+              <span>Security & Compliance</span>
+            </div>
+            <div class="diff-card">
+              <span class="diff-dot"></span>
+              <span>Diversity, equity & inclusion</span>
+            </div>
+            <div class="diff-card">
+              <span class="diff-dot"></span>
+              <span>Construction & Focus Structure</span>
+            </div>
+            <div class="diff-card">
+              <span class="diff-dot"></span>
+              <span>Data Transformation Studio</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="diff-image-card">
+          <img src="images/team-meeting.jpg" alt="Executive planning session">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 7. PROJECTS SHOWCASE ==================== -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="projects-header">
+        <div>
+          <span class="pill-tag">PORTFOLIO</span>
+          <h2 class="section-title-large" style="margin-bottom: 0;">
+            Discover luxury living at an<br>affordable price
+          </h2>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <a href="#contact" class="btn-get-touch" style="background: #14161a; color: #fff;">Inquire Properties ↗</a>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card" onclick="alert('Project: The Luminary Tower — 420,000 sq ft Mixed-use Highrise with Sky Gardens.')">
+          <img src="images/project-1.jpg" alt="The Luminary Tower" class="project-thumb">
+          <div class="project-body">
+            <h3 class="project-title">The Luminary Tower</h3>
+            <div class="project-specs">New York, NY • Highrise Residential</div>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="alert('Project: Apex Horizon Atrium — Contemporary Commercial Innovation Center.')">
+          <img src="images/project-2.jpg" alt="Apex Horizon Atrium" class="project-thumb">
+          <div class="project-body">
+            <h3 class="project-title">Apex Horizon Atrium</h3>
+            <div class="project-specs">London, UK • Commercial Headquarters</div>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="alert('Project: Solstice Cascading Villas — Sustainable Terraced Waterfront Living.')">
+          <img src="images/project-3.jpg" alt="Solstice Cascading Villas" class="project-thumb">
+          <div class="project-body">
+            <h3 class="project-title">Solstice Cascading Villas</h3>
+            <div class="project-specs">Miami, FL • Waterfront Luxury</div>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="alert('Project: Vertex Innovation Hub — Smart-building Tech Campus.')">
+          <img src="images/project-4.jpg" alt="Vertex Innovation Hub" class="project-thumb">
+          <div class="project-body">
+            <h3 class="project-title">Vertex Innovation Hub</h3>
+            <div class="project-specs">Berlin, Germany • Mixed Use & Tech</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 8. LEADERSHIP TEAM ==================== -->
+  <section class="leadership-section">
+    <div class="container">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+        <span class="pill-tag">OUR TEAM</span>
+        <h2 class="section-title-large" style="margin-bottom: 12px;">
+          Global executive<br>leadership
+        </h2>
+        <p style="color: var(--text-body); font-size: 15px;">
+          Decades of institutional expertise across global asset management, construction, and high-yield real estate syndication.
+        </p>
+      </div>
+
+      <div class="leaders-grid">
+        <div class="leader-card">
+          <img src="images/leader-1.jpg" alt="Alexander Vance" class="leader-photo">
+          <div class="leader-name">Alexander Vance</div>
+          <div class="leader-role">Founder & Chief Executive Officer</div>
+        </div>
+
+        <div class="leader-card">
+          <img src="images/leader-2.jpg" alt="Marcus Reynolds" class="leader-photo">
+          <div class="leader-name">Marcus Reynolds</div>
+          <div class="leader-role">Head of Capital Investments & M&A</div>
+        </div>
+
+        <div class="leader-card">
+          <img src="images/leader-3.jpg" alt="Christian Wolff" class="leader-photo">
+          <div class="leader-name">Christian Wolff</div>
+          <div class="leader-role">Chief Architectural Officer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 9. RECOGNITIONS & AWARDS ==================== -->
+  <section class="awards-section">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <span class="pill-tag">HONORS</span>
+        <h2 class="section-title-large" style="margin-bottom: 8px;">
+          Recognitions<br>we got
+        </h2>
+      </div>
+
+      <div class="awards-grid">
+        <div class="award-item">
+          <div class="award-year">2025</div>
+          <div class="award-name">Emerging Designer Of The Year</div>
+          <div class="award-org">Architects Global Summit</div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">2024</div>
+          <div class="award-name">Best Residential Design</div>
+          <div class="award-org">International Property Awards</div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">2023</div>
+          <div class="award-name">Sustainable Design Award</div>
+          <div class="award-org">Green Building Council</div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">2022</div>
+          <div class="award-name">Top Real Estate Syndication</div>
+          <div class="award-org">Global Asset Forum</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 10. NEWS & INSPIRATION ==================== -->
+  <section class="projects-section" id="news" style="padding-top: 20px;">
+    <div class="container">
+      <div class="projects-header">
+        <div>
+          <span class="pill-tag">JOURNAL</span>
+          <h2 class="section-title-large" style="margin-bottom: 0;">
+            Discover inspiration<br>and trends
+          </h2>
+        </div>
+      </div>
+
+      <div class="projects-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="project-card">
+          <img src="images/news-1.jpg" alt="News 1" class="project-thumb">
+          <div class="project-body">
+            <span style="font-size: 12px; font-weight: 700; color: var(--text-muted);">NOV 18, 2026 • ARCHITECTURE</span>
+            <h3 class="project-title" style="margin-top: 8px;">Biophilic Living: Designing Skyscrapers With Sky Gardens</h3>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/news-2.jpg" alt="News 2" class="project-thumb">
+          <div class="project-body">
+            <span style="font-size: 12px; font-weight: 700; color: var(--text-muted);">NOV 12, 2026 • INVESTMENT</span>
+            <h3 class="project-title" style="margin-top: 8px;">Institutional Real Estate In High-Growth Urban Corridors</h3>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/news-3.jpg" alt="News 3" class="project-thumb">
+          <div class="project-body">
+            <span style="font-size: 12px; font-weight: 700; color: var(--text-muted);">NOV 04, 2026 • TECHNOLOGY</span>
+            <h3 class="project-title" style="margin-top: 8px;">How AI And Digital Twins Are Transforming Landmark Builds</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 11. CTA BANNER & FOOTER ==================== -->
+  <section class="cta-banner-section" id="contact">
+    <div class="cta-card">
+      <div>
+        <h2 class="cta-title">Your dream home awaits.</h2>
+        <p class="cta-desc">
+          Subscribe to get exclusive private offering memorandum decks, off-market opportunities, and market intelligence directly to your inbox.
+        </p>
+      </div>
+
+      <form class="cta-form" onsubmit="event.preventDefault(); alert('Subscribed to Spaciaz Private Portfolio updates!');">
+        <input type="email" class="cta-input" placeholder="Enter your email address..." required>
+        <button type="submit" class="cta-submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="brand-logo" style="color: #ffffff; margin-bottom: 16px; display: inline-flex;">
+            spaciaz<span class="dot"></span>
+          </a>
+          <p style="color: #8c92a0; font-size: 14px; line-height: 1.6; max-width: 320px;">
+            The new standard of architectural excellence. Shaping modern skylines, institutional investments, and sustainable communities worldwide.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Landmark Projects</a></li>
+            <li><a href="services.html">Our Solutions</a></li>
+            <li><a href="about.html">About Spaciaz</a></li>
+            <li><a href="contact.html">Investor Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Portfolio</h4>
+          <ul>
+            <li><a href="#projects">Residential Highrises</a></li>
+            <li><a href="#projects">Commercial Campuses</a></li>
+            <li><a href="#projects">Waterfront Villas</a></li>
+            <li><a href="#projects">Mixed-Use Districts</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><span style="color: #fff; font-weight: 700;">+(004) 123 - 456 88</span></li>
+            <li><span style="color: #8c92a0;">invest@spaciaz.com</span></li>
+            <li><span style="color: #8c92a0;">742 Evergreen Terrace, NY</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Spaciaz Real Estate Holdings Ltd. All rights reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="color: #8c92a0;">Privacy Policy</a>
+          <a href="#" style="color: #8c92a0;">Terms of Service</a>
+          <a href="#" style="color: #8c92a0;">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function openVideoModal() {
+      alert('Playing Spaciaz 40-Year Landmark Retrospective film (2:30 min).');
+    }
+  </script>
+</body>
+</html>

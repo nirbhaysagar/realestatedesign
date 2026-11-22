@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concierge Desk & Metros Offices — Aangan Luxury Estates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-banner {
+      background: var(--bg-emerald);
+      color: #ffffff;
+      padding: 90px 0 60px;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 40px;
+      margin-bottom: 70px;
+    }
+    .office-card {
+      background: #ffffff;
+      border: 1px solid #e8e2d8;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      transition: all 0.2s;
+    }
+    .office-card:hover {
+      border-color: var(--accent-gold);
+      box-shadow: 0 8px 24px rgba(13,38,31,0.06);
+    }
+    .office-city {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--bg-emerald);
+      margin-bottom: 4px;
+    }
+    .office-addr {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .office-meta {
+      font-size: 13px;
+      color: #333;
+      font-weight: 600;
+    }
+    .contact-form-card {
+      background: #fbf9f4;
+      border: 1px solid #e8e2d8;
+      border-radius: 16px;
+      padding: 36px;
+    }
+    @media (max-width: 800px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top RERA Bar -->
+  <div class="rera-top-bar">
+    <div class="container">
+      <div class="rera-bar-inner">
+        <div class="rera-badge-item">
+          <span>🏛️</span>
+          <span>100% RERA Registered • MahaRERA | HRERA | K-RERA | TS-RERA</span>
+        </div>
+        <div class="rera-badge-item">
+          <span>☸</span>
+          <span>Certified 100% Vastu Compliant Sky Mansions</span>
+        </div>
+        <div class="rera-badge-item">
+          <span>⭐</span>
+          <span>Private Concierge: <span class="hotline">+91 98200 45678</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-wrap">
+          <div class="brand-title">AANGAN</div>
+          <div class="brand-sub">LUXURY ESTATES • आँगन</div>
+        </a>
+        <ul class="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="residences.html">Residences</a></li>
+          <li><a href="amenities.html">Club & Amenities</a></li>
+          <li><a href="nri-desk.html">NRI Gateway</a></li>
+          <li><a href="contact.html" style="color: var(--accent-gold); font-weight: 800;">Concierge Desk</a></li>
+        </ul>
+        <button class="btn-vip-pickup" onclick="document.getElementById('inquiryForm').scrollIntoView({behavior:'smooth'})">
+          <span>🚗 Direct Inquiry</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="contact-banner">
+    <div class="container">
+      <span class="vastu-pill">DISCREET & CONFIDENTIAL ADVISORY</span>
+      <h1 class="hero-heading" style="font-size: 52px; margin: 12px 0 16px;">Private Client Concierge</h1>
+      <p style="color: rgba(255,255,255,0.8); font-size: 17px; max-width: 650px;">
+        Connect with our senior managing partners in Mumbai, Delhi NCR, Bengaluru, and Hyderabad. Strict non-disclosure protocols guaranteed for every inquiry.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="container">
+    <div class="contact-layout">
+
+      <!-- Offices Column -->
+      <div>
+        <span class="vastu-pill">METRO HEADQUARTERS</span>
+        <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 34px; color: var(--bg-emerald); margin: 10px 0 24px;">
+          Private Enclaves & Salons
+        </h2>
+
+        <!-- BKC -->
+        <div class="office-card">
+          <div class="office-city">Mumbai (Flagship Corporate)</div>
+          <p class="office-addr">Suite 1402, One BKC, G Block, Bandra Kurla Complex, Mumbai 400051</p>
+          <div class="office-meta">Direct: +91 22 6821 4000 • concierge.mumbai@aanganestates.com</div>
+        </div>
+
+        <!-- Delhi NCR -->
+        <div class="office-card">
+          <div class="office-city">Delhi NCR & Gurugram</div>
+          <p class="office-addr">Level 18, Two Horizon Centre, DLF Phase 5, Golf Course Road, Gurugram 122002</p>
+          <div class="office-meta">Direct: +91 124 492 8100 • ncr@aanganestates.com</div>
+        </div>
+
+        <!-- Bengaluru -->
+        <div class="office-card">
+          <div class="office-city">Bengaluru Innovation Suite</div>
+          <p class="office-addr">Penthouse 24, Concorde Block, UB City, Vittal Mallya Road, Bengaluru 560001</p>
+          <div class="office-meta">Direct: +91 80 4112 9000 • blr@aanganestates.com</div>
+        </div>
+
+        <!-- Hyderabad -->
+        <div class="office-card">
+          <div class="office-city">Hyderabad Wealth Enclave</div>
+          <p class="office-addr">The Crown, Road No. 36, Jubilee Hills, Hyderabad 500033</p>
+          <div class="office-meta">Direct: +91 40 6701 8800 • hyd@aanganestates.com</div>
+        </div>
+      </div>
+
+      <!-- Form Column -->
+      <div class="contact-form-card" id="inquiryForm">
+        <span class="vastu-pill">CONFIDENTIAL INQUIRY</span>
+        <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; color: var(--bg-emerald); margin: 10px 0 14px;">
+          Engage a Managing Director
+        </h3>
+        <p style="font-size: 13px; color: #666; margin-bottom: 24px;">
+          Share your portfolio requirements. A dedicated partner will arrange a tailored confidential dossier and coordinate chauffeur pickup.
+        </p>
+
+        <form onsubmit="handleContactSubmit(event)">
+          <div style="margin-bottom: 14px;">
+            <label style="display:block; font-size:12px; font-weight:700; color:#555; margin-bottom:4px;">YOUR FULL NAME</label>
+            <input type="text" required placeholder="e.g. Yashvardhan Goenka" style="width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:6px; font-size:14px; background:#fff;">
+          </div>
+
+          <div style="margin-bottom: 14px;">
+            <label style="display:block; font-size:12px; font-weight:700; color:#555; margin-bottom:4px;">DIRECT PHONE / WHATSAPP</label>
+            <input type="tel" required placeholder="+91 98200 XXXXX" style="width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:6px; font-size:14px; background:#fff;">
+          </div>
+
+          <div style="margin-bottom: 14px;">
+            <label style="display:block; font-size:12px; font-weight:700; color:#555; margin-bottom:4px;">ACQUISITION BUDGET RANGE</label>
+            <select style="width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:6px; font-size:14px; background:#fff;">
+              <option>₹10 Cr – ₹20 Cr</option>
+              <option>₹20 Cr – ₹35 Cr</option>
+              <option>₹35 Cr – ₹50 Cr+</option>
+              <option>Bespoke Villa Land (₹50 Cr+)</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <label style="display:block; font-size:12px; font-weight:700; color:#555; margin-bottom:4px;">SPECIFIC PREFERENCES (VASTU, SEA VIEW, DELIVERY TIMELINE)</label>
+            <textarea rows="3" placeholder="e.g. East-facing duplex in Worli with clear Arabian Sea frontage, ready by Q4 2026." style="width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:6px; font-size:14px; background:#fff;"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width:100%; padding:14px; font-size:15px;">Submit Confidential Inquiry →</button>
+        </form>
+
+        <div id="contactSuccess" style="display:none; margin-top:14px; padding:12px; background:#e8f5e9; color:#2e7d32; border-radius:6px; font-size:13px; text-align:center;">
+          ✓ Thank you. A Managing Partner has received your request and will contact you directly.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-title" style="color: #ffffff; font-size: 26px;">AANGAN</div>
+          <div class="brand-sub" style="color: var(--accent-gold); margin-bottom: 16px;">LUXURY ESTATES • आँगन</div>
+          <p style="font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.6);">
+            India's foremost private real estate advisory for ultra-high-net-worth individuals, royal family offices, and leading diaspora leaders worldwide.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Portfolios</h4>
+          <ul class="footer-links">
+            <li><a href="residences.html">Worli Sea Face Pavilions</a></li>
+            <li><a href="residences.html">Golf Course Road Sky Mansions</a></li>
+            <li><a href="residences.html">UB City Penthouses</a></li>
+            <li><a href="residences.html">Jubilee Hills Estates</a></li>
+            <li><a href="residences.html">Assagao Portuguese Villas</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="residences.html">All Residences</a></li>
+            <li><a href="amenities.html">Club & Amenities</a></li>
+            <li><a href="nri-desk.html">NRI Gateway</a></li>
+            <li><a href="contact.html">Concierge Desk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">RERA & Compliance</h4>
+          <p style="font-size: 12px; line-height: 1.7; color: rgba(255,255,255,0.5);">
+            Aangan operates exclusively with RERA-licensed Tier-1 developers. MahaRERA P51800049281 | HRERA 2024/GGM/891 | K-RERA PRM/KA/RERA/1251.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Aangan Luxury Estates Private Limited. All rights reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="color: rgba(255,255,255,0.6);">Privacy Policy</a>
+          <a href="#" style="color: rgba(255,255,255,0.6);">RERA Disclosures</a>
+          <a href="#" style="color: rgba(255,255,255,0.6);">Terms of Engagement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      document.getElementById('contactSuccess').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

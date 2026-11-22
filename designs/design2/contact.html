@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Investor Relations — Spaciaz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-banner-spaciaz {
+      background: var(--bg-dark);
+      color: #ffffff;
+      padding: 90px 32px 60px;
+      margin: 10px 32px 50px;
+      border-radius: var(--radius-xl);
+    }
+    .investor-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      margin-bottom: 70px;
+    }
+    .office-item {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: var(--radius-md);
+      margin-bottom: 18px;
+      border: 1px solid var(--border-light);
+    }
+    .form-card-spaciaz {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+    @media (max-width: 768px) {
+      .investor-grid { grid-template-columns: 1fr; }
+      .form-card-spaciaz { padding: 24px; }
+      .page-banner-spaciaz { margin: 10px 16px 30px; padding: 60px 20px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        spaciaz<span class="dot"></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" style="color: #000; font-weight: 800;">Contact</a></li>
+      </ul>
+      <div class="header-right">
+        <a href="contact.html" class="btn-get-touch">Investor Portal ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="page-banner-spaciaz">
+    <span class="pill-tag" style="background: rgba(255,255,255,0.1); color: var(--accent-lime);">CAPITAL INQUIRIES</span>
+    <h1 style="font-size: 48px; font-weight: 900; letter-spacing: -0.04em; margin: 12px 0 16px;">Investor & Media Relations</h1>
+    <p style="color: #a4abb8; font-size: 17px; max-width: 600px;">
+      Direct inquiries for joint-venture syndication, institutional acquisitions, and press communications.
+    </p>
+  </section>
+
+  <!-- Grid -->
+  <section class="container">
+    <div class="investor-grid">
+      
+      <div>
+        <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 24px;">Global Regional Hubs</h2>
+        
+        <div class="office-item">
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 4px;">New York (Americas HQ)</h3>
+          <p style="font-size: 14px; color: var(--text-body); margin-bottom: 6px;">One Vanderbilt Avenue, 48th Floor, New York, NY 10017</p>
+          <p style="font-size: 13.5px; font-weight: 700;">ny@spaciaz.com • +1 (212) 555-8900</p>
+        </div>
+
+        <div class="office-item">
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 4px;">London (EMEA Capital)</h3>
+          <p style="font-size: 14px; color: var(--text-body); margin-bottom: 6px;">22 Bishopsgate, Level 32, London EC2N 4BQ</p>
+          <p style="font-size: 13.5px; font-weight: 700;">london@spaciaz.com • +44 20 7946 0192</p>
+        </div>
+
+        <div class="office-item">
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 4px;">Singapore (APAC Desk)</h3>
+          <p style="font-size: 14px; color: var(--text-body); margin-bottom: 6px;">Marina Bay Financial Centre, Tower 2, Singapore 018983</p>
+          <p style="font-size: 13.5px; font-weight: 700;">apac@spaciaz.com • +65 6789 0123</p>
+        </div>
+      </div>
+
+      <div class="form-card-spaciaz">
+        <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 8px;">Request Offering Memorandum</h3>
+        <p style="color: var(--text-body); font-size: 14px; margin-bottom: 24px;">Qualified institutional investors and sovereign funds can request private placement decks.</p>
+
+        <form onsubmit="event.preventDefault(); alert('Offering memorandum request submitted! Our capital relations team will verify and send the private deck.'); this.reset();" style="display: flex; flex-direction: column; gap: 16px;">
+          <div>
+            <label style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Organization / Entity</label>
+            <input type="text" required placeholder="e.g. Blackstone Private Wealth" style="width: 100%; padding: 12px; border: 1px solid var(--border-light); border-radius: 8px; margin-top: 6px; font-size: 14px;">
+          </div>
+          <div>
+            <label style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Contact Officer Name</label>
+            <input type="text" required placeholder="e.g. Richard Hawthorne" style="width: 100%; padding: 12px; border: 1px solid var(--border-light); border-radius: 8px; margin-top: 6px; font-size: 14px;">
+          </div>
+          <div>
+            <label style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Corporate Email</label>
+            <input type="email" required placeholder="r.hawthorne@entity.com" style="width: 100%; padding: 12px; border: 1px solid var(--border-light); border-radius: 8px; margin-top: 6px; font-size: 14px;">
+          </div>
+          <div>
+            <label style="font-size: 12px; font-weight: 700; text-transform: uppercase;">Capital Deployment Scope</label>
+            <select style="width: 100%; padding: 12px; border: 1px solid var(--border-light); border-radius: 8px; margin-top: 6px; font-size: 14px;">
+              <option>$25M - $50M Equity</option>
+              <option>$50M - $150M JV Co-Investment</option>
+              <option>$150M+ Masterplan Syndication</option>
+            </select>
+          </div>
+          <button type="submit" style="background: var(--accent-lime); color: #111; padding: 14px; border-radius: 8px; font-weight: 800; font-size: 15px; cursor: pointer; border: none; margin-top: 8px;">
+            Request Offering Memorandum ↗
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none;">
+        <div>© 2026 Spaciaz Real Estate Holdings Ltd. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

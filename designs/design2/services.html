@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Spaciaz Real Estate Holdings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-banner-spaciaz {
+      background: var(--bg-dark);
+      color: #ffffff;
+      padding: 90px 32px 60px;
+      margin: 10px 32px 50px;
+      border-radius: var(--radius-xl);
+    }
+    .services-bento-full {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-bottom: 70px;
+    }
+    .service-box {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .service-box:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-lime);
+    }
+    .service-num {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--accent-lime);
+      background: var(--bg-dark);
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+      .services-bento-full { grid-template-columns: 1fr; }
+      .service-box { padding: 24px; }
+      .page-banner-spaciaz { margin: 10px 16px 30px; padding: 60px 20px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        spaciaz<span class="dot"></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="services.html" style="color: #000; font-weight: 800;">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="header-right">
+        <a href="contact.html" class="btn-get-touch">Inquire Solutions ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="page-banner-spaciaz">
+    <span class="pill-tag" style="background: rgba(255,255,255,0.1); color: var(--accent-lime);">SOLUTIONS & ADVISORY</span>
+    <h1 style="font-size: 48px; font-weight: 900; letter-spacing: -0.04em; margin: 12px 0 16px;">Institutional Capabilities</h1>
+    <p style="color: #a4abb8; font-size: 17px; max-width: 600px;">
+      Delivering end-to-end capital syndication, architectural engineering, and asset lifecycle management for global real estate leaders.
+    </p>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="container">
+    <div class="services-bento-full">
+      
+      <div class="service-box">
+        <span class="service-num">01. CAPITAL</span>
+        <h3 style="font-size: 26px; font-weight: 800; margin-bottom: 12px;">Equity Syndication & Joint Ventures</h3>
+        <p style="color: var(--text-body); font-size: 15px; line-height: 1.65; margin-bottom: 20px;">
+          Structuring institutional capital stacks, co-investments, and mezzanine debt for premier highrise and mixed-use commercial developments.
+        </p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600;">
+          <li>✓ Cross-border institutional syndication ($50M - $500M)</li>
+          <li>✓ Risk-adjusted underwriting & IRR modeling</li>
+          <li>✓ Sovereign wealth fund partnership structuring</li>
+        </ul>
+      </div>
+
+      <div class="service-box">
+        <span class="service-num">02. ARCHITECTURE</span>
+        <h3 style="font-size: 26px; font-weight: 800; margin-bottom: 12px;">Development & Masterplanning</h3>
+        <p style="color: var(--text-body); font-size: 15px; line-height: 1.65; margin-bottom: 20px;">
+          From site acquisition through architectural zoning, structural design, and general contracting execution at landmark scale.
+        </p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600;">
+          <li>✓ Urban zoning & municipal entitlement approvals</li>
+          <li>✓ Biophilic and high-density vertical engineering</li>
+          <li>✓ Digital Twin 4D construction monitoring</li>
+        </ul>
+      </div>
+
+      <div class="service-box">
+        <span class="service-num">03. SUSTAINABILITY</span>
+        <h3 style="font-size: 26px; font-weight: 800; margin-bottom: 12px;">Net-Zero ESG Carbon Solutions</h3>
+        <p style="color: var(--text-body); font-size: 15px; line-height: 1.65; margin-bottom: 20px;">
+          Transforming developments into LEED Platinum and BREEAM Outstanding assets that attract Tier-1 global corporate tenants.
+        </p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600;">
+          <li>✓ Geothermal and on-site solar facade generation</li>
+          <li>✓ Embodied carbon lifecycle assessments</li>
+          <li>✓ Green bond accreditation compliance</li>
+        </ul>
+      </div>
+
+      <div class="service-box">
+        <span class="service-num">04. ASSET MANAGEMENT</span>
+        <h3 style="font-size: 26px; font-weight: 800; margin-bottom: 12px;">Portfolio Optimization & Leasing</h3>
+        <p style="color: var(--text-body); font-size: 15px; line-height: 1.65; margin-bottom: 20px;">
+          Active asset management maximizing NOI, tenant retention, automated smart building facilities, and strategic disposition.
+        </p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600;">
+          <li>✓ Global corporate anchor tenant negotiations</li>
+          <li>✓ IoT smart HVAC & predictive maintenance</li>
+          <li>✓ Capital recycling and portfolio secondary sales</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none;">
+        <div>© 2026 Spaciaz Real Estate Holdings Ltd. All rights reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="index.html" style="color: #999;">Home</a>
+          <a href="projects.html" style="color: #999;">Projects</a>
+          <a href="about.html" style="color: #999;">About</a>
+          <a href="contact.html" style="color: #999;">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

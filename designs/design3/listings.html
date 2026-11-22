@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listings — Realnest Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .listings-banner {
+      background: #ffffff;
+      padding: 50px 0 30px;
+      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 40px;
+    }
+    .filter-pills-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .pill-filter {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      padding: 9px 20px;
+      border-radius: var(--radius-pill);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .pill-filter.active, .pill-filter:hover {
+      background: var(--accent-orange);
+      color: #ffffff;
+      border-color: var(--accent-orange);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Realnest</span>
+        </a>
+        <ul class="main-nav">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="listings.html" class="nav-link" style="color: var(--accent-orange); font-weight: 800;">Listings</a></li>
+          <li><a href="cities.html" class="nav-link">Cities</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="header-right">
+          <button class="btn-add-listing" onclick="alert('Add Listing Portal');">
+            <span>Add Listing</span>
+            <span>↗</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="listings-banner">
+    <div class="container">
+      <span style="font-size: 13px; font-weight: 700; color: var(--accent-orange); text-transform: uppercase;">VERIFIED INVENTORY</span>
+      <h1 style="font-family: var(--font-serif); font-size: 46px; font-weight: 600; margin: 8px 0 10px;">Available Properties</h1>
+      <p style="color: var(--text-body); font-size: 16px;">Browse homes, apartments, and villas available for purchase, monthly rent, and mortgage.</p>
+    </div>
+  </section>
+
+  <!-- Listings Grid -->
+  <section class="container">
+    
+    <div class="filter-pills-row">
+      <button class="pill-filter active" onclick="filterRent('all', this)">All (6)</button>
+      <button class="pill-filter" onclick="filterRent('rent', this)">For Rent</button>
+      <button class="pill-filter" onclick="filterRent('buy', this)">For Buy</button>
+      <button class="pill-filter" onclick="filterRent('villa', this)">Villas</button>
+      <button class="pill-filter" onclick="filterRent('apartment', this)">Apartments</button>
+    </div>
+
+    <div class="listings-grid" id="listingsGrid">
+      
+      <!-- Card 1 -->
+      <div class="listing-item-card" data-mode="rent" onclick="openDetails('Silverwood Manor', '$3,095 /month')">
+        <div class="card-img-holder">
+          <img src="images/listing-1.jpg" alt="Silverwood Manor">
+        </div>
+        <div class="card-body-content">
+          <div class="price-row">
+            <span class="price-val">$3,095</span>
+            <span class="price-unit">/month</span>
+          </div>
+          <h3 class="property-name">Silverwood Manor</h3>
+          <p class="property-address">6391 Elgin St. Celina, Delaware 10299</p>
+          <div class="property-specs-line">
+            <span>🛏 3 Beds</span>
+            <span>🚿 2 Bathrooms</span>
+            <span>📐 5x7 m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="listing-item-card" data-mode="rent" onclick="openDetails('Palmstone Residences', '$2,500 /month')">
+        <div class="card-img-holder">
+          <img src="images/listing-2.jpg" alt="Palmstone Residences">
+        </div>
+        <div class="card-body-content">
+          <div class="price-row">
+            <span class="price-val">$2,500</span>
+            <span class="price-unit">/month</span>
+          </div>
+          <h3 class="property-name">Palmstone Residences</h3>
+          <p class="property-address">1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+          <div class="property-specs-line">
+            <span>🛏 4 Beds</span>
+            <span>🚿 3 Bathrooms</span>
+            <span>📐 5x7.5 m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="listing-item-card" data-mode="buy" onclick="openDetails('Cedar Grove Estate', '$3,550 /month')">
+        <div class="card-img-holder">
+          <img src="images/listing-3.jpg" alt="Cedar Grove Estate">
+        </div>
+        <div class="card-body-content">
+          <div class="price-row">
+            <span class="price-val">$3,550</span>
+            <span class="price-unit">/month</span>
+          </div>
+          <h3 class="property-name">Cedar Grove Estate</h3>
+          <p class="property-address">1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+          <div class="property-specs-line">
+            <span>🛏 3 Beds</span>
+            <span>🚿 3 Bathrooms</span>
+            <span>📐 6x8.2 m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="listing-item-card" data-mode="rent" onclick="openDetails('Hillside Haven', '$1,400 /month')">
+        <div class="card-img-holder">
+          <img src="images/listing-4.jpg" alt="Hillside Haven">
+        </div>
+        <div class="card-body-content">
+          <div class="price-row">
+            <span class="price-val">$1,400</span>
+            <span class="price-unit">/month</span>
+          </div>
+          <h3 class="property-name">Hillside Haven</h3>
+          <p class="property-address">3517 W. Gray St. Utica, Pennsylvania 57867</p>
+          <div class="property-specs-line">
+            <span>🛏 4 Beds</span>
+            <span>🚿 2 Bathrooms</span>
+            <span>📐 5x7 m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="listing-item-card" data-mode="buy" onclick="openDetails('The Oakridge Villa', '$2,500 /month')">
+        <div class="card-img-holder">
+          <img src="images/listing-5.jpg" alt="The Oakridge Villa">
+        </div>
+        <div class="card-body-content">
+          <div class="price-row">
+            <span class="price-val">$2,500</span>
+            <span class="price-unit">/month</span>
+          </div>
+          <h3 class="property-name">The Oakridge Villa</h3>
+          <p class="property-address">243 Curlew Road, Palm Harbor, TX</p>
+          <div class="property-specs-line">
+            <span>🛏 2 Beds</span>
+            <span>🚿 1 Bathrooms</span>
+            <span>📐 5x7.5 m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="listing-item-card" data-mode="rent" onclick="openDetails('Bluebell Heights', '$1,500 /month')">
+        <div class="card-img-holder">
+          <img src="images/listing-6.jpg" alt="Bluebell Heights">
+        </div>
+        <div class="card-body-content">
+          <div class="price-row">
+            <span class="price-val">$1,500</span>
+            <span class="price-unit">/month</span>
+          </div>
+          <h3 class="property-name">Bluebell Heights</h3>
+          <p class="property-address">3517 W. Gray St. Utica, Pennsylvania 57867</p>
+          <div class="property-specs-line">
+            <span>🛏 3 Beds</span>
+            <span>🚿 1 Bathrooms</span>
+            <span>📐 5x7 m²</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none;">
+        <div>© 2026 Realnest Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function filterRent(mode, btn) {
+      document.querySelectorAll('.pill-filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cards = document.querySelectorAll('#listingsGrid .listing-item-card');
+      cards.forEach(card => {
+        if (mode === 'all' || card.getAttribute('data-mode') === mode) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function openDetails(name, price) {
+      alert(`Property Selected: ${name}\nRate: ${price}\nContact Realnest representative for viewing schedule.`);
+    }
+  </script>
+</body>
+</html>

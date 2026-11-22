@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Poperty Architectural Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-banner {
+      background: #111111;
+      color: #ffffff;
+      padding: 120px 0 60px;
+    }
+    .about-lead-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      padding: 80px 0;
+      align-items: center;
+    }
+    .milestone-timeline {
+      padding: 70px 0;
+      background: #fafafa;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      margin-top: 40px;
+    }
+    .timeline-box {
+      border-left: 2px solid #111;
+      padding-left: 20px;
+    }
+    .timeline-year {
+      font-size: 28px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 6px;
+    }
+    .curators-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin: 50px 0 80px;
+    }
+    .curator-card {
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+    }
+    .curator-img {
+      height: 320px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .curator-info {
+      padding: 24px;
+    }
+    @media (max-width: 768px) {
+      .about-lead-grid { grid-template-columns: 1fr; padding: 50px 0; }
+      .timeline-grid { grid-template-columns: 1fr; }
+      .curators-grid { grid-template-columns: 1fr; }
+      .page-banner { padding: 90px 0 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="site-header" style="background: #111111; padding: 20px 32px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <a href="index.html" class="brand-logo">Poperty</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="properties.html">Properties</a>
+      <a href="about.html" style="color: #fff; font-weight: 700;">About Us</a>
+      <a href="index.html#featured">Featured</a>
+      <a href="index.html#testimonials">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="header-cta-btn">
+      <span>Get in Touch</span>
+      <span class="btn-arrow-circle">↗</span>
+    </a>
+  </header>
+
+  <!-- Banner -->
+  <section class="page-banner">
+    <div class="container">
+      <span style="font-size: 13px; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 0.08em;">Our Story</span>
+      <h1 style="font-size: 46px; font-weight: 800; letter-spacing: -0.03em; margin: 10px 0 16px;">Architecture in Motion</h1>
+      <p style="color: rgba(255,255,255,0.7); font-size: 16px; max-width: 600px;">
+        For over a decade, Poperty has curated the world’s most distinctive modernist residences, pairing architectural pedigree with seamless client execution.
+      </p>
+    </div>
+  </section>
+
+  <!-- Story Lead -->
+  <section class="container">
+    <div class="about-lead-grid">
+      <div>
+        <h2 style="font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 20px;">We believe space shapes consciousness and living.</h2>
+        <p style="font-size: 16px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
+          Founded by architectural historians and luxury real estate advisors, Poperty was built to bridge the gap between museum-grade architectural design and residential living.
+        </p>
+        <p style="font-size: 16px; color: var(--text-muted); line-height: 1.7;">
+          Every property in our private registry is evaluated on architectural merit, natural illumination, materiality, and enduring investment value.
+        </p>
+      </div>
+      <div style="border-radius: var(--radius-lg); overflow: hidden; height: 420px; box-shadow: var(--shadow-md);">
+        <img src="images/partner-hallway.jpg" alt="Interior Architecture" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Milestones -->
+  <section class="milestone-timeline">
+    <div class="container">
+      <h2 style="font-size: 32px; font-weight: 800;">Our Milestone Trajectory</h2>
+      <div class="timeline-grid">
+        <div class="timeline-box">
+          <div class="timeline-year">2016</div>
+          <p style="font-size: 14px; color: var(--text-muted);">Founded in Miami with a focused private portfolio of 12 mid-century and brutalist villas.</p>
+        </div>
+        <div class="timeline-box">
+          <div class="timeline-year">2020</div>
+          <p style="font-size: 14px; color: var(--text-muted);">Crossed $500M in private volume. Expanded to New York, Chicago, and Austin corridors.</p>
+        </div>
+        <div class="timeline-box">
+          <div class="timeline-year">2023</div>
+          <p style="font-size: 14px; color: var(--text-muted);">Awarded Architectural Brokerage of the Year at Global Real Estate Design Summit.</p>
+        </div>
+        <div class="timeline-box">
+          <div class="timeline-year">2026</div>
+          <p style="font-size: 14px; color: var(--text-muted);">Surpassed $1.4B+ in transactions across 350+ curated architectural masterworks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curators -->
+  <section class="container" id="curators" style="padding-top: 80px;">
+    <h2 style="font-size: 32px; font-weight: 800; text-align: center;">Our Architectural Curators</h2>
+    <p style="text-align: center; color: var(--text-muted); font-size: 15px; margin-top: 8px;">Guiding your acquisitions with architectural rigor.</p>
+    
+    <div class="curators-grid">
+      <div class="curator-card">
+        <img src="images/avatar-1.jpg" alt="Elena Rostova" class="curator-img">
+        <div class="curator-info">
+          <h3 style="font-size: 18px; font-weight: 700;">Elena Rostova</h3>
+          <p style="color: var(--text-muted); font-size: 13.5px;">Co-Founder & Principal Curator (Miami)</p>
+        </div>
+      </div>
+      <div class="curator-card">
+        <img src="images/avatar-2.jpg" alt="Marcus Chen" class="curator-img">
+        <div class="curator-info">
+          <h3 style="font-size: 18px; font-weight: 700;">Marcus Chen</h3>
+          <p style="color: var(--text-muted); font-size: 13.5px;">Managing Director, Capital Acquisitions</p>
+        </div>
+      </div>
+      <div class="curator-card">
+        <img src="images/avatar-3.jpg" alt="Sophia Al-Mansoor" class="curator-img">
+        <div class="curator-info">
+          <h3 style="font-size: 18px; font-weight: 700;">Sophia Al-Mansoor</h3>
+          <p style="color: var(--text-muted); font-size: 13.5px;">Head of Interior & Renovation Advisory</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo" style="color: #111;">Poperty</a>
+          <p class="footer-brand-desc">
+            Defining the pinnacle of modern architectural living. Curated listings, bespoke acquisitions, and unparalleled real estate advisory.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#curators">Curators</a></li>
+            <li><a href="index.html#testimonials">Client Stories</a></li>
+            <li><a href="index.html#services">Advisory</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Inquiries</h4>
+          <ul>
+            <li><span>+1 (800) 890-4200</span></li>
+            <li><span>vip@poperty.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Poperty Real Estate Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

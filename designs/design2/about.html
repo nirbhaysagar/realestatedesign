@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Spaciaz Real Estate Holdings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-banner-spaciaz {
+      background: var(--bg-dark);
+      color: #ffffff;
+      padding: 90px 32px 60px;
+      margin: 10px 32px 50px;
+      border-radius: var(--radius-xl);
+    }
+    .about-story-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 50px;
+      margin-bottom: 70px;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .about-story-grid { grid-template-columns: 1fr; }
+      .page-banner-spaciaz { margin: 10px 16px 30px; padding: 60px 20px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        spaciaz<span class="dot"></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html" style="color: #000; font-weight: 800;">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="header-right">
+        <a href="contact.html" class="btn-get-touch">Contact Desk ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="page-banner-spaciaz">
+    <span class="pill-tag" style="background: rgba(255,255,255,0.1); color: var(--accent-lime);">OUR HERITAGE</span>
+    <h1 style="font-size: 48px; font-weight: 900; letter-spacing: -0.04em; margin: 12px 0 16px;">40 Years of Landmark Execution</h1>
+    <p style="color: #a4abb8; font-size: 17px; max-width: 600px;">
+      Building skyline legacies that endure across generations of economic cycles and architectural transformations.
+    </p>
+  </section>
+
+  <!-- Story & Team -->
+  <section class="container">
+    <div class="about-story-grid">
+      <div>
+        <h2 style="font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 20px;">Shaping modern skylines with institutional capital.</h2>
+        <p style="color: var(--text-body); font-size: 16px; line-height: 1.7; margin-bottom: 16px;">
+          Established in 1986, Spaciaz has grown from a boutique development firm into one of the world's most trusted private real estate syndicates, overseeing $2.3B+ in completed landmark assets.
+        </p>
+        <p style="color: var(--text-body); font-size: 16px; line-height: 1.7;">
+          Our integrated platform unites global investment banking, architectural design, and construction execution under one institutional roof.
+        </p>
+      </div>
+      <div style="border-radius: var(--radius-lg); overflow: hidden; height: 420px; box-shadow: var(--shadow-md);">
+        <img src="images/team-meeting.jpg" alt="Team meeting" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+    </div>
+
+    <!-- Leadership Section -->
+    <div style="margin-top: 60px; margin-bottom: 80px;">
+      <h2 style="font-size: 32px; font-weight: 800; text-align: center; margin-bottom: 40px;">Executive Leadership</h2>
+      <div class="leaders-grid">
+        <div class="leader-card">
+          <img src="images/leader-1.jpg" alt="Alexander Vance" class="leader-photo">
+          <div class="leader-name">Alexander Vance</div>
+          <div class="leader-role">Founder & Chief Executive Officer</div>
+        </div>
+        <div class="leader-card">
+          <img src="images/leader-2.jpg" alt="Marcus Reynolds" class="leader-photo">
+          <div class="leader-name">Marcus Reynolds</div>
+          <div class="leader-role">Head of Capital Investments & M&A</div>
+        </div>
+        <div class="leader-card">
+          <img src="images/leader-3.jpg" alt="Christian Wolff" class="leader-photo">
+          <div class="leader-name">Christian Wolff</div>
+          <div class="leader-role">Chief Architectural Officer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none;">
+        <div>© 2026 Spaciaz Real Estate Holdings Ltd. All rights reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="index.html" style="color: #999;">Home</a>
+          <a href="projects.html" style="color: #999;">Projects</a>
+          <a href="services.html" style="color: #999;">Services</a>
+          <a href="contact.html" style="color: #999;">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
